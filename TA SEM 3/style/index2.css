@@ -32,10 +32,16 @@ nav {
     list-style-type: none;
 }
 
-.icon-head{
-    text-align: right;
-    padding-left: 10px;
+.icon-1{
+    padding-right: 20px;
+    color: #000;
+    transition: 0.3s ease-in;
 }
+
+.icon-1 :hover {
+    color: rgb(137, 50, 97);
+}
+
 
 a {
     padding: 10px;
