@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background: rgb(255, 243, 251);
+}
+
+.desc{
+    padding: 20px 0 20px 15px;
+    color: rgb(59, 33, 49);
+    font-family: Arial;
+}

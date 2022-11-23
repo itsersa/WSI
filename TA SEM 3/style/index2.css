@@ -140,6 +140,7 @@ h1 {
 
 .container-2 {
     display: grid;
+    align-items: center;
 }
 
 .row {
