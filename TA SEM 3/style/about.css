@@ -71,19 +71,15 @@ h2 {
 .row .content{
     flex: 1 1 40rem;
     padding-top: 6.5rem;
-
-
 }
 
 .row .image{
     flex: 1 1 40rem;
-    
 }
 
-.row .image img{
+.row img{
     width: 100%;
-    padding: 1rem;
-    animation: float 3s linear infinite;
+    display: flex ;
 }
 
 @keyframes float{

@@ -71,17 +71,15 @@ nav a:hover {
 
 .slide img {
     width: 100%;
-    height: 500px;
-    display: flex;
+    height: 450px;
 }
 
 .prev,
 .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 250px;
     width: auto;
-    padding: 10px;
     color: rgb(119, 70, 96);
     font-weight: bold;
     font-size: 30px;
