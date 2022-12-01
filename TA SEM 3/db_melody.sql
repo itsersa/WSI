@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin_list` (
   `id` int(11) NOT NULL,
   `nama_karyawan` varchar(50) NOT NULL,
-  `foto_karyawan` varchar(100) NOT NULL
+  `foto_karyawan` varchar(100) NOT NULL,
+  `notelp_karyawan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -40,9 +41,9 @@ CREATE TABLE `admin_list` (
 --
 
 CREATE TABLE `admin_login` (
+  `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `nama_admin` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -82,6 +83,53 @@ CREATE TABLE `user_register` (
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Indeks untuk tabel `admin_list`
+--
+ALTER TABLE `admin_list`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `admin_login`
+--
+ALTER TABLE `admin_login`
+  ADD KEY `id` (`id`);
+
+--
+-- Indeks untuk tabel `user_login`
+--
+ALTER TABLE `user_login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `user_register`
+--
+ALTER TABLE `user_register`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel `admin_list`
+--
+ALTER TABLE `admin_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `user_login`
+--
+ALTER TABLE `user_login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `user_register`
+--
+ALTER TABLE `user_register`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Ketidakleluasaan untuk tabel `admin_login`
+--
+ALTER TABLE `admin_login`
+  ADD CONSTRAINT `admin_login_ibfk_1` FOREIGN KEY (`id`) REFERENCES `admin_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
