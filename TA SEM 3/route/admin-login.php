@@ -39,7 +39,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 $_SESSION['username'] = $row['username_karyawan'];
                 $_SESSION['password'] = $row['password_karyawan'];
 
-                // print_r($_SESSION);
+                print_r($_SESSION);
                 header("Location: ../dashboard.php");
             }
         } else {
