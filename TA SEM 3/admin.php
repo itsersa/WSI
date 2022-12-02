@@ -7,41 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh">
-        <form class="border shadow p-3 rounded" style="width: 450px;" action="route/admin-login.php" method="post">
-            <h2 class="text-center p-3">LOGIN</h2>
-
-            <?php if (isset($_GET['error'])) { ?>
-                <div class="alert alert-danger" role="alert">
-                    <?= $_GET['error'] ?>
+    <div id="wrapper">
+        <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh">
+            <form action="route/admin-login.php" method="post" class="navbar-form">
+                <center>
+                    <h2>Silahkan Login !</h2>
+                </center>
+                <div class="navbar">
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="username" aria-label="Username" aria-describedby="basic-addon1" name="username">
+                    </div>
                 </div>
-            <?php } ?>
-
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username">
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password">
-            </div>
-            <!-- <div class="mb-0">
-                <label class="form-label">Select User Type:</label>
-            </div>
-            <select class="form-select mb-3" aria-label="Default select example">
-                <option selected value="user">User</option>
-                <option value="admin">One</option>
-            </select> -->
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input type="password" class="form-control" placeholder="password" aria-label="Password" aria-describedby="basic-addon1" name="password">
+                </div>
+                <div class="navbar">
+                    <button type="submit" class="btn btn-outline-dark" style="width: 100%;">login</button>
+                </div>
+                <?php if (isset($_GET['error'])) { ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= $_GET['error'] ?>
+                    </div>
+                <?php } ?>
+            </form>
+        </div>
+    </div>
     </div>
 </body>
 
