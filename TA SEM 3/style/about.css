@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(249, 243, 246);
+    background-color: #ffeeee;
 }
 
 .navbar {
@@ -13,11 +13,11 @@ body {
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: rgb(249, 243, 246);
+    background-color: rgb(255, 255, 255);
 }
 
-.logo{
-    width: 70px;  
+.logo {
+    width: 70px;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -53,6 +53,7 @@ h1 {
 span {
     font-family: Arial;
 }
+
 h2 {
     text-align: center;
     padding: px 50px 0;
@@ -60,50 +61,63 @@ h2 {
     color: rgb(91, 27, 58);
 }
 
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     min-height: 100vh;
     align-items: center;
+    justify-content: space-around;
 }
-
-.row .content{
+.ban{
+    flex-basis: 45%;
+    min-width: 400px;
+}
+.row .content {
     flex: 1 1 40rem;
-    padding-top: 6.5rem;
+    padding-top: 6.5rem; 
 }
 
-.row .image{
+.image {
     flex: 1 1 40rem;
+    animation: float 3s linear infinite;
 }
 
-.row img{
+.row img {
     width: 100%;
-    display: flex ;
+    display: flex;
 }
 
-@keyframes float{
-    0%, 100%{
+@keyframes float {
+
+    0%,
+    100% {
         transform: translateY(0rem);
     }
-    50%{
+
+    50% {
         transform: translateY(3rem);
     }
 
 }
 
-.row .content h2{
-font-size: 2rem;
-color: rgb(150, 58, 58);
+.row .content h2 {
+    font-size: 2rem;
+    color: rgb(150, 58, 58);
+    text-align: left;
+    padding-left: 50px;
 }
 
-.row .content p{
+p {
     font-size: 1rem;
-    color: #666;
-    padding: 1rem 10%;
-    }
+    color: rgb(51, 0, 0);
+    padding-left: 75px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+}
 
-.button{
+.button {
     font-family: sans-serif;
     font-size: 15px;
     background: rgb(214, 23, 102);
@@ -115,12 +129,12 @@ color: rgb(150, 58, 58);
     margin-left: 250px;
 }
 
-button :hover{
+button :hover {
     opacity: 0.9;
 }
 
 
-section{
+section {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -129,31 +143,37 @@ section{
     padding-left: 5rem;
     padding-right: 5rem;
 }
+.container{
+    background-color: #ffeeee;
+    padding-bottom: 50px;
+}
+
 .slide-container {
     max-width: 1000px;
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    padding: 20px 10px 20px 10px;
+    background-color: rgb(87, 0, 0);
+    padding: 20px 20px 20px 20px;
+    
 }
-.slide-content{
-  margin: 0 10px; 
-  overflow: hidden;
-  border-radius: 20px; 
 
+.slide-content {
+    margin: 0 10px;
+    overflow: hidden;
+    border-radius: 20px;
 }
-.card{
+
+.card {
     width: 310px;
     border-radius: 25px;
     background-color: #fff;
-  position: relative;
-  box-shadow: 0 10px 10px rgba(0,0,0,.1);
-  margin-left: 10px;
-  
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    margin-left: 10px;
 
-    
 }
+
 .image-content,
-.card-content{
+.card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,12 +183,15 @@ section{
     padding-top: 50px;
     padding-bottom: 70px;
 }
-.image-content{
+
+.image-content {
     position: relative;
     row-gap: 5px;
     padding: 25px 0;
+    
 }
-.overlay{
+
+.overlay {
     position: absolute;
     left: 0;
     top: 0;
@@ -177,8 +200,9 @@ section{
     background-color: #f75b96;
     border-radius: 25px 25px 0 25px;
 }
+
 .overlay::before,
-.overlay::after{
+.overlay::after {
     content: '';
     position: absolute;
     right: 0;
@@ -187,11 +211,13 @@ section{
     width: 40px;
     background-color: #f75b96;
 }
-.overlay::after{
+
+.overlay::after {
     border-radius: 0 25px 0 0;
     background-color: #fff;
 }
-.card-image{
+
+.card-image {
     position: relative;
     height: 150px;
     width: 150px;
@@ -199,26 +225,30 @@ section{
     background: #fff;
     padding: 3px;
 }
-.card-image .card-img{
+
+.card-image .card-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #f75b96;
 }
-.name{
+
+.name {
     font-size: 25px;
     font-weight: 300px;
     color: #333;
     padding-bottom: 5px;
 }
-.description{
+
+.description {
     font-size: 14px;
     color: #707070;
     text-align: center;
     margin-bottom: 10px;
 }
-.container{
+
+.container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -227,10 +257,11 @@ section{
     flex-direction: column;
 }
 
-iframe{
+iframe {
     width: 80%;
     height: 500px;
 }
+
 .footer {
     list-style-type: none;
     width: 100%;
@@ -242,7 +273,8 @@ iframe{
     font-size: 13px;
     line-height: 20px;
 }
-.row1{
+
+.row1 {
     width: 85%;
     margin: auto;
     display: flex;
@@ -251,36 +283,45 @@ iframe{
     justify-content: space-between;
 
 }
-.col{
-   flex-basis: 20%;
-   padding: 10px; 
+
+.col {
+    flex-basis: 20%;
+    padding: 10px;
 }
-.col:nth-child(2), .col:nth-child(3){
+
+.col:nth-child(2),
+.col:nth-child(3) {
     flex-basis: 15%;
 }
-.logo1{
+
+.logo1 {
     width: 80px;
     margin-bottom: 30px;
 }
-.col h3{
+
+.col h3 {
     width: fit-content;
     margin-bottom: 20px;
     position: relative;
 }
-.email-id{
-    width:fit-content;
+
+.email-id {
+    width: fit-content;
     border-bottom: 1px solid #ccc;
     margin: 20px 0;
 }
-ul li{
+
+ul li {
     list-style: none;
     margin-bottom: 12px;
 }
-ul li a{
+
+ul li a {
     text-decoration: none;
     color: rgb(22, 22, 22);
 }
-form{
+
+form {
     padding-bottom: 15px;
     display: flex;
     align-items: center;
@@ -288,12 +329,14 @@ form{
     border-bottom: 1px solid #ccc;
     margin-bottom: 50px;
 }
-form .far{
+
+form .far {
     font-size: 18px;
     margin-right: 10px;
-    
+
 }
-form input{
+
+form input {
     width: 100%;
     background: transparent;
     color: #ccc;
@@ -301,17 +344,20 @@ form input{
     outline: none;
     margin-left: 10px;
 }
-form button{
+
+form button {
     background: transparent;
     border: 0;
     outline: none;
     cursor: pointer;
 }
-form button .fas{
+
+form button .fas {
     font-size: 16px;
     color: #ccc;
 }
-.social-icons .fa-brands{
+
+.social-icons .fa-brands {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -323,17 +369,20 @@ form button .fas{
     margin-right: 10px;
     cursor: pointer;
 }
-hr{
+
+hr {
     width: 90%;
     border: 0;
     border-bottom: 1px solid #ccc;
     margin: 20px auto;
 }
-.copyright{
+
+.copyright {
     text-align: center;
     font-size: 14px;
 }
-.underline{
+
+.underline {
     width: 100%;
     height: 5px;
     background: #0f0d0d;
@@ -343,7 +392,8 @@ hr{
     left: 0;
     overflow: hidden;
 }
-.underline span{
+
+.underline span {
     width: 15px;
     height: 100%;
     background: rgb(247, 138, 138);
@@ -353,24 +403,29 @@ hr{
     left: 10px;
     animation: moving 2s linear infinite;
 }
-@keyframes moving{
-    0%{
+
+@keyframes moving {
+    0% {
         left: -20px;
     }
-    100%{
+
+    100% {
         left: 100%;
     }
 }
 
-@media (max-width: 700px){
-    .footer{
+@media (max-width: 700px) {
+    .footer {
         bottom: unset;
     }
-    .col{
+
+    .col {
         flex-basis: 100%;
-         
-     }
-     .col:nth-child(2), .col:nth-child(3){
-         flex-basis: 100%;
-     }
+
+    }
+
+    .col:nth-child(2),
+    .col:nth-child(3) {
+        flex-basis: 100%;
+    }
 }
