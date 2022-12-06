@@ -108,29 +108,31 @@ h2 {
     padding-left: 50px;
 }
 
-p {
+.up {
     font-size: 1rem;
     color: rgb(51, 0, 0);
     padding-left: 75px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     text-align: left;
 }
 
 .button {
     font-family: sans-serif;
     font-size: 15px;
-    background: rgb(214, 23, 102);
+    background: rgb(255, 150, 150);
     color: white;
-    border: rgb(214, 23, 102);
+    outline: none;
+    border: none;
     border-radius: 5px;
     padding: 12px 20px;
-    margin-top: 10px;
-    margin-left: 250px;
+    /* margin-top: 10px; */
+    margin-left: 200px;
+    cursor: pointer;
 }
 
 button :hover {
-    opacity: 0.9;
+    background-color: rgb(255, 208, 208);
 }
 
 
@@ -151,7 +153,7 @@ section {
 .slide-container {
     max-width: 1000px;
     width: 100%;
-    background-color: rgb(87, 0, 0);
+    background-color: rgb(245, 172, 172);
     padding: 20px 20px 20px 20px;
     
 }
