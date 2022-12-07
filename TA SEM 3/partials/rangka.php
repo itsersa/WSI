@@ -55,7 +55,12 @@
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="list-admin.php">Daftar Admin</a>
+
+                            <!-- FOR ADMIN -->
+                            <?php if ($_SESSION['jabatan'] == 'owner') { ?>
+                                <a class="nav-link" href="list-admin.php">Daftar Admin</a>
+                            <?php } ?>
+
                             <a class="nav-link" href="list-user.php">Daftar User</a>
                         </nav>
                     </div>
@@ -91,10 +96,15 @@
                         </nav>
                     </div>
                     <div class="sb-sidenav-menu-heading">Addons</div>
-                    <a class="nav-link" href="add-admin.php">
-                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        Tambah Admin
-                    </a>
+
+                    <!-- FOR OWNER -->
+                    <?php if ($_SESSION['jabatan'] == 'owner') { ?>
+                        <a class="nav-link" href="add-admin.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Tambah Admin
+                        </a>
+                    <?php } ?>
+
                     <a class="nav-link" href="product-admin.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Setting Produk
