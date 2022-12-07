@@ -30,7 +30,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
             echo "<pre>";
-            print_r($row);
+            // print_r($row);
             if ($row['username_karyawan'] === $username && $row['password_karyawan'] == $password) {
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['nama'] = $row['nama_karyawan'];
@@ -38,6 +38,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 $_SESSION['notelp'] = $row['notelp_karyawan'];
                 $_SESSION['username'] = $row['username_karyawan'];
                 $_SESSION['password'] = $row['password_karyawan'];
+                $_SESSION['jabatan'] = $row['role'];
 
                 print_r($_SESSION);
                 header("Location: ../dashboard.php");
