@@ -112,7 +112,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
             <!-- PARTIAL KERANGKA FOOTER -->
             <?= include('./partials/foo.php') ?>
         </div>
-        </div>
     </body>
 
     </html>

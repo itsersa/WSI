@@ -18,6 +18,7 @@
             <form action="route/admin-login.php" method="post" class="navbar-form">
                 <center>
                     <h2>Silahkan Login !</h2>
+                    username = owner || password = owner
                 </center>
                 <div class="navbar">
                     <div class="input-group">
@@ -36,6 +37,8 @@
                 <div class="navbar">
                     <button type="submit" class="btn btn-outline-dark" style="width: 100%;">login</button>
                 </div>
+                
+                <!-- MENAMPILKAN ALERT -->
                 <?php if (isset($_GET['error'])) { ?>
                     <div class="alert alert-danger" role="alert">
                         <?= $_GET['error'] ?>

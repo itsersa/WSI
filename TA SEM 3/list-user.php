@@ -17,15 +17,63 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">See Our User Here !</li>
                     </ol>
-                    <div class="row">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
+                            DataTable User
+                        </div>
+                        <div class="card-body">
+                            <table id="datatablesSimple">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>Password</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>Password</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <?php
+                                    include "koneksi.php";
 
+                                    $no = 1;
+                                    $query = mysqli_query($koneksi, "SELECT * FROM user_register");
+                                    while ($data = mysqli_fetch_array($query)) :
+                                    ?>
+                                        <tr>
+                                            <td><?= $no++ ?></td>
+                                            <td><?= $data['nama'] ?></td>
+                                            <td><?= $data['email'] ?></td>
+                                            <td><?= $data['password'] ?></td>
+                                            <td>
+                                                <button class="btn btn-outline-success" type="button">
+                                                    <i class="fas fa-address-card"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger" type="button">
+                                                    <i class="fas fa-trash"></i> </button>
+                                            </td>
+                                        </tr>
+                                    <?php endwhile; ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </main>
+            <!-- PARTIAL KERANGKA FOOTER -->
+            <?= include('./partials/foo.php') ?>
         </div>
 
-        <!-- PARTIAL KERANGKA FOOTER -->
-        <?= include('./partials/foo.php') ?>
     </body>
 
 <?php } else {

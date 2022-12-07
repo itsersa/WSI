@@ -53,6 +53,10 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 <label for="inputPassword">Password</label>
                                 <input type="text" class="form-control" id="inputPassword" value="<?= $_SESSION['password'] ?>">
                             </div>
+                            <div>
+                                <label for="inputJabatan">Jabatan</label>
+                                <input type="text" class="form-control" id="inputJabatan" value="<?= $_SESSION['jabatan'] ?>" readonly>
+                            </div>
                         </div>
                     </div>
 
@@ -61,7 +65,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
 
             <!-- PARTIAL KERANGKA FOOTER -->
             <?= include('./partials/foo.php') ?>
-        </div>
         </div>
     </body>
 
