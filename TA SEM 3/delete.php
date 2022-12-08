@@ -13,8 +13,9 @@ $deleteUser = mysqli_query($koneksi, $queryUser);
 
 if ($deleteAdmin) {
     header("Location: list-admin.php");
-} else if ($deleteUser) {
-    header("Location: list-user.php");
-} {
+    if ($deleteUser) {
+        header("Location: list-user.php");
+    }
+} else {
     echo "Failed: " . mysqli_error($koneksi);
 };
