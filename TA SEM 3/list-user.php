@@ -27,6 +27,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 <thead>
                                     <tr>
                                         <th>No</th>
+                                        <th hidden>Noid</th>
                                         <th>Nama</th>
                                         <th>Email</th>
                                         <th>Password</th>
@@ -36,6 +37,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 <tfoot>
                                     <tr>
                                         <th>No</th>
+                                        <th hidden>Noid</th>
                                         <th>Nama</th>
                                         <th>Email</th>
                                         <th>Password</th>
@@ -46,21 +48,28 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                     <?php
                                     include "koneksi.php";
 
-                                    $no = 1;
+                                    $nomer = 1;
                                     $query = mysqli_query($koneksi, "SELECT * FROM user_register");
                                     while ($data = mysqli_fetch_array($query)) :
+                                        $noid = $data['id'];
                                     ?>
                                         <tr>
-                                            <td><?= $no++ ?></td>
+                                            <td><?= $nomer++ ?></td>
+                                            <td hidden><?= $noid ?></td>
                                             <td><?= $data['nama'] ?></td>
                                             <td><?= $data['email'] ?></td>
                                             <td><?= $data['password'] ?></td>
                                             <td>
-                                                <button class="btn btn-outline-success" type="button">
-                                                    <i class="fas fa-address-card"></i>
-                                                </button>
-                                                <button class="btn btn-outline-danger" type="button">
-                                                    <i class="fas fa-trash"></i> </button>
+                                                <a href="">
+                                                    <button class="btn btn-outline-success" type="button">
+                                                        <i class="fas fa-address-card"></i>
+                                                    </button>
+                                                </a>
+                                                <a href="delete.php?id=<?= $noid ?>">
+                                                    <button class="btn btn-outline-danger" type="button">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </a>
                                             </td>
                                         </tr>
                                     <?php endwhile; ?>
