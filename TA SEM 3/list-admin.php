@@ -73,7 +73,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                                         <!-- </a> -->
                                                     </button>
                                                 </a>
-                                                <a href="delete.php?id=<?= $noid ?>" onclick="return confirm('Delete This User?')">
+                                                <a href="delete.php?id=<?= $noid ?>" onclick="return confirm('Delete This Admin?')">
                                                     <button class="btn btn-outline-danger" type="button">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
