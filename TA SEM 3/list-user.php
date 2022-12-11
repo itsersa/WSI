@@ -17,6 +17,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">See Our User Here !</li>
                     </ol>
+                    <?php if (isset($_GET['success'])) { ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= $_GET['success'] ?>
+                        </div>
+                    <?php } ?>
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
@@ -65,7 +70,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                                         <i class="fas fa-address-card"></i>
                                                     </button>
                                                 </a>
-                                                <a href="delete.php?id=<?= $noid ?>" onclick="return confirm('Delete This User ?')">
+                                                <a href="delete-user.php?id=<?= $noid ?>" onclick="return confirm('Delete This User ?')">
                                                     <button class="btn btn-outline-danger" type="button">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
