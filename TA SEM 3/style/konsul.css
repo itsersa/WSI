@@ -53,3 +53,7 @@ a {
 nav a:hover {
     color: rgb(137, 50, 97);
 }
+
+.under{
+    padding: 100px 0 100px 0 ;
+}
