@@ -21,9 +21,9 @@ if (isset($_POST['submit'])) {
 
     // WITH IMAGE
     if ($error === 0) {
-        if ($img_size > 125000) {
+        if ($img_size > 1250000) {
             $txt = "File Terlalu Besar!";
-            header("Location: add-admin.php?error=$txt");
+            header("Location: ../add-admin.php?error=$txt");
         } else {
             $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
             $img_ex_lc = strtolower($img_ex);
