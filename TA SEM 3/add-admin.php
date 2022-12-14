@@ -11,22 +11,32 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
         <?= include('./partials/rangka.php') ?>
 
         <div id="layoutSidenav_content">
-            <form action="route/add_admin.php" method="post">
+            <form action="route/route-add-admin.php" method="post" enctype="multipart/form-data">
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Tambah Admin</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Add Admin Here !</li>
                         </ol>
+
+                        <!-- SUCCESS -->
                         <?php if (isset($_GET['success'])) { ?>
                             <div class="alert alert-success" role="alert">
                                 <?= $_GET['success'] ?>
                             </div>
                         <?php } ?>
+
+                        <!-- ERROR -->
+                        <?php if (isset($_GET['error'])) { ?>
+                            <div class="alert alert-danger" role="alert">
+                                <?= $_GET['error'] ?>
+                            </div>
+                        <?php } ?>
+
                         <div class="row">
                             <div class="col-xl-3 col-md-1">
                                 <div class="card" style="width: 15rem;">
-                                    <img src="assets-admin/img/owner.png" class="card-img-top" alt="admin logo">
+                                    <img src="" class="card-img-top" alt="admin logo">
                                 </div>
                             </div>
 
@@ -42,7 +52,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputPicture">Picture :</label>
-                                    <input type="file" class="form-control" id="inputPicture" name="">
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarAdmin">
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button class="btn btn-outline-success" type="submit" name="submit">Update</button>

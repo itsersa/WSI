@@ -65,7 +65,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                         <tr>
                                             <td><?= $nomer++ ?></td>
                                             <td hidden><?= $noid ?></td>
-                                            <td><?= $data['foto_karyawan'] ?></td>
+                                            <td><img style="width: 120px" src="gambar/<?= $data['foto_karyawan']?>" alt="foto admin"></td>
                                             <td><?= $data['nama_karyawan'] ?></td>
                                             <td><?= $data['notelp_karyawan'] ?></td>
                                             <td><?= $data['username_karyawan'] ?></td>
