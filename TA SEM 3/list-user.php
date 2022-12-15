@@ -65,7 +65,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                             <td><?= $data['email'] ?></td>
                                             <td><?= $data['password'] ?></td>
                                             <td>
-                                                <a href="">
+                                                <a href="edit-user.php?id=<?= $noid?>">
                                                     <button class="btn btn-outline-success" type="button">
                                                         <i class="fas fa-address-card"></i>
                                                     </button>

@@ -65,17 +65,15 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                         <tr>
                                             <td><?= $nomer++ ?></td>
                                             <td hidden><?= $noid ?></td>
-                                            <td><img style="width: 120px" src="gambar/<?= $data['foto_karyawan']?>" alt="foto admin"></td>
+                                            <td><img style="width: 120px" src="gambar/<?= $data['foto_karyawan'] ?>" alt="foto admin"></td>
                                             <td><?= $data['nama_karyawan'] ?></td>
                                             <td><?= $data['notelp_karyawan'] ?></td>
                                             <td><?= $data['username_karyawan'] ?></td>
                                             <td><?= $data['password_karyawan'] ?></td>
                                             <td>
-                                                <a href="">
+                                                <a href="edit-admin.php?id=<?= $noid ?>">
                                                     <button class="btn btn-outline-success" type="button">
-                                                        <!-- <a href="/route/delete.php"> -->
                                                         <i class="fas fa-address-card"></i>
-                                                        <!-- </a> -->
                                                     </button>
                                                 </a>
                                                 <a href="delete-admin.php?id=<?= $noid ?>" onclick="return confirm('Delete This Admin?')">
