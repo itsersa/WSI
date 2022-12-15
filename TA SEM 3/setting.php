@@ -131,7 +131,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                     echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/setting.php?id={$id}'>";
                 }
                 ?>
-
             </main>
 
             <!-- PARTIAL KERANGKA FOOTER -->
