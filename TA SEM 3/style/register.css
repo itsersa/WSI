@@ -1,135 +1,100 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: rgb(255, 255, 255);
+    background: #dfe9f5;
 }
 
-.container {
-    width: 100%;
-    display: flex;
-    max-width: 635px;
-    background: rgb(164, 110, 139);
+.wrapper{
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    font-size: 2rem;
+    color: #07001f;
+    margin-bottom: 1.2rem;
+}
+
+form input{
+    width: 92%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
     border-radius: 20px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    background: #e4e4e4;
 }
 
-.regis-page {
-    width: 300px;
-    align-items: center;
-    
-}
-
-form {
-    width: 250px;
-    margin: 60px auto;
-}
-
-h1 {
-    margin: 20px;
-    text-align: center;
-    box-sizing: border-box;
-    font-family: Tahoma;
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: rgb(255, 255, 255);
-}
-
-p {
-    text-align: center;
-    margin: 10px;
-    color: white;
-}
-
-.left img {
-    width: 340px;
-    height: 100%;
-    background-color: rgb(247, 233, 239);
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-input {
-    width: 100%;
-    margin: 1.5px;
-    border: none;
-    outline: none;
-    padding: 9px;
-    border-radius: 3px;
-    font-size: 15px;
-}
-
-form label {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 5px;
-    color: rgb(255, 195, 229);
-}
-
-button {
-    padding: 9px;
-    width: 100%;
-    margin: 1.5px;
-    border-radius: 3px;
-    font-size: 15px;
-    background-color: rgb(255, 216, 237);
+button{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
     outline: none;
     border: none;
-    color: rgb(110, 48, 81);
+    width: 90%;
+    color: #fff;
+    cursor: pointer;
+    background:rgba(17, 107, 143);
+}
+
+button:hover{
+    background: rgb(17, 107, 143, 0.877);
+}
+
+input:focus{
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.terms{
+    margin-top: 0.2rem;
+}
+
+.terms input{
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
     cursor: pointer;
 }
 
-button:hover {
-    background: rgb(244, 191, 225);
+.terms label{
+    font-size: 0.7rem;
 }
 
-a {
-    color: white;
-    transition: color 0s;
+.terms a{
+    color: rgb(17, 107, 143, 0.877);
+    text-decoration: none;
 }
 
-a:hover {
-    color: rgb(85, 0, 45);
+.member{
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    color: #636363;
 }
-.a-2 {
-    box-sizing: border-box;
-    width: 150px;
-    
 
+.member a{
+    color: rgb(17, 107, 143, 0.877);
+    text-decoration: none;
 }
-@media (max-width: 880px) {
-    .container {
-        width: 100%;
-        max-width: 635px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
 
-    form {
-        width: 300px;
-        margin: 20px;
-    }
+.recover{
+    text-align: right;
+    font-size: 0.7rem;
+    margin: 0.3rem 1.4rem 0 0;
+}
 
-    .regis-page {
-        width: 400px;
-        padding: 15px;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    .left img {
-        width: 100%;
-        height: 100%;
-    }
+.recover a{
+    text-decoration: none;
+    color: #464647;
 }

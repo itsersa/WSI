@@ -2,31 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login  and Sign Up form</title>
     <link rel="stylesheet" href="style/register.css">
+        <!-- font Awesome Cdn Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/
+    ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <img src="img/LOGO.png">
+    <div class="wrapper">
+        <h1>Register</h1>
+        <form action="#">
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Password">
+            <input type="text" placeholder="Re-Enter Password">
+        </form>
+        <div class="terms">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">I agree to these <a href="#">terms & Conditions</a></label>
         </div>
-        <div class="regis-page">
-            <form action="">
-                <h1>REGISTER</h1>
-                <!-- <hr> -->
-                <p>(beauty slogan)</p>
-                <label for="Fullname">Fullname</label>
-                <input type="text" placeholder="bill gates"> <br>
-                <label for="Email">Email</label>
-                <input type="text" placeholder="example@gmail.com"> <br>
-                <label for="Password">Password</label>
-                <input type="password" placeholder="password"> <br> <br>
-                <button>Register</button> <br> <br>
-                <p>Have an account?&nbsp;<a href="login.html">Login</a></p> <br>
-                <a class= "a-2" href="index2.html">Home</a>
-            </form>
+        <button>Register</button>
+        <div class="member">
+            Already a member? <a href="./login.html">
+                Login Here
+            </a>
         </div>
     </div>
 </body>
