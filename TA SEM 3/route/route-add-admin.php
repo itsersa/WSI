@@ -64,27 +64,9 @@ if (isset($_POST['submit'])) {
             }
         }
     } else {
-        // WITHOUT IMAGE
-        $query = "INSERT INTO admin_list (
-            id, 
-            nama_karyawan, 
-            foto_karyawan, 
-            notelp_karyawan, 
-            username_karyawan, 
-            password_karyawan, 
-            role ) 
-            VALUES (
-                NULL, 
-                '$nama_admin', 
-                '', 
-                '$notelp_admin', 
-                '$username_admin', 
-                '$password_admin', 
-                '$jabatan_admin'
-            )";
-        $result = mysqli_query($koneksi, $query);
-        $txt = "Berhasil Menambah Admin!";
+        $txt = "gagal!";
         header("Location: ../add-admin.php?success=$txt");
+        
     }
 } else {
     header("Location: add-admin.php");
