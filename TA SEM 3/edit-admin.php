@@ -54,9 +54,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                     <label for="inputPicture">Picture :</label>
                                     <input type="file" class="form-control" id="inputPicture" name="gambarAdmin">
                                 </div>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-outline-success" name="submit" type="submit" onclick="return confirm('Refresh setelah ubah data')">Update</button>
-                                </div>
                             </div>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->
@@ -73,6 +70,10 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                     <label for="inputJabatan">Jabatan</label>
                                     <input type="text" class="form-control" id="inputJabatan" value="<?= $data['role'] ?>" readonly>
                                 </div>
+                                <p class="mt-2 ">
+                                    <button class="btn btn-outline-success" style="width:49%" name="submit" type="submit" onclick="return confirm('Refresh setelah ubah data')">Update</button>
+                                    <a href="list-admin.php" class="btn btn-outline-warning" name="back" type="submit" style="width:49%">Back</a>
+                                </p>
                             </div>
                         </div>
 

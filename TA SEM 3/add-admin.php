@@ -42,34 +42,31 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->
                             <div class="form-group col-md-3">
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputNama">Nama :</label>
                                     <input type="text" class="form-control" id="inputNama" name="nama">
                                 </div>
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputUsername">Username :</label>
                                     <input type="text" class="form-control" id="inputUsername" name="username">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                     <label for="inputPicture">Picture :</label>
                                     <input type="file" class="form-control" id="inputPicture" name="gambarAdmin">
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-outline-success" type="submit" name="submit">Update</button>
                                 </div>
                             </div>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->
                             <div class="form-group col-md-3">
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputNotelp">No.Telp</label>
                                     <input type="text" class="form-control" id="inputNotelp" name="notelp">
                                 </div>
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputPassword">Password</label>
                                     <input type="text" class="form-control" id="inputPassword" name="password">
                                 </div>
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputJabatan">Jabatan</label>
                                     <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="jabatan">
                                         <option selected>Pilih Jabatan</option>
@@ -77,6 +74,9 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                         <option id="admin" name="jabatan" value="admin">Admin</option>
                                     </select>
                                     <!-- <input type="text" class="form-control" id="inputJabatan" name="jabatan"> -->
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-success" type="submit" name="submit">Update</button>
                                 </div>
                             </div>
                         </div>

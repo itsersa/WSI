@@ -40,37 +40,38 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->
                             <div class="form-group col-md-3">
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputNama">Nama :</label>
                                     <input type="text" class="form-control" id="inputNama" value="<?= $data['nama_karyawan'] ?>" readonly>
                                 </div>
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputUsername">Username :</label>
                                     <input type="text" class="form-control" name="username" id="inputUsername" value="<?= $data['username_karyawan'] ?>">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                     <label for="inputPicture">Picture :</label>
                                     <input type="file" class="form-control" id="inputPicture" name="gambarAdmin">
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-outline-success" name="submit" type="submit" onclick="return confirm('Refresh setelah ubah data')">Update</button>
                                 </div>
                             </div>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->
                             <div class="form-group col-md-3">
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputNotelp">No.Telp</label>
                                     <input type="text" class="form-control" name="notelp" id="inputNotelp" value="<?= $data['notelp_karyawan'] ?>">
                                 </div>
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputPassword">Password</label>
                                     <input type="text" class="form-control" name="password" id="inputPassword" value="<?= $data['password_karyawan'] ?>">
                                 </div>
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputJabatan">Jabatan</label>
                                     <input type="text" class="form-control" id="inputJabatan" value="<?= $data['role'] ?>" readonly>
                                 </div>
+                                <p class="mt-2 ">
+                                    <button class="btn btn-outline-success" style="width:49%" name="submit" type="submit" onclick="return confirm('Refresh setelah ubah data')">Update</button>
+                                    <a href="dashboard.php" class="btn btn-outline-warning" name="back" type="submit" style="width:49%">Back</a>
+                                </p>
                             </div>
                         </div>
 

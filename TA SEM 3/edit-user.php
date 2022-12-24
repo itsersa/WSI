@@ -42,33 +42,34 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->
                             <div class="form-group col-md-3">
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputNama">Nama :</label>
                                     <input type="text" class="form-control" name="nama" id="inputNama" value="<?= $data['nama'] ?>">
                                 </div>
-                                <div>
+                                <div class="mb-2">
                                     <label for="inputPassword">Password</label>
                                     <input type="text" class="form-control" name="password" id="inputPassword" value="<?= $data['password'] ?>">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                     <label for="inputPicture">Picture :</label>
                                     <input type="file" class="form-control" id="inputPicture" value="">
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-outline-success" name="submit" type="submit" onclick="return confirm('Refresh setelah ubah data')">Update</button>
                                 </div>
                             </div>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->
                             <div class="form-group col-md-3">
-                                <div>
-                                    <label for="inputEmail">Email :</label>
-                                    <input type="email" class="form-control" name="email" id="inputEmail" value="<?= $data['email'] ?>">
-                                    <div>
-                                        <label for="inputJabatan">Jabatan</label>
-                                        <input type="text" class="form-control" id="inputJabatan" value="<?= $data['role'] ?>" readonly>
-                                    </div>
+                                <div class="mb-2">
+                                    <label for="inputUsername">Username :</label>
+                                    <input type="text" class="form-control" name="username" id="inputUsername" value="<?= $data['username'] ?>">
                                 </div>
+                                <div class="mb-2">
+                                    <label for="inputJabatan">Jabatan</label>
+                                    <input type="text" class="form-control" id="inputJabatan" value="<?= $data['role'] ?>" readonly>
+                                </div>
+                                <p class="mt-2 ">
+                                    <button class="btn btn-outline-success" style="width:49%" name="submit" type="submit" onclick="return confirm('Refresh setelah ubah data')">Update</button>
+                                    <a href="list-user.php" class="btn btn-outline-warning" name="back" type="submit" style="width:49%">Back</a>
+                                </p>
                             </div>
 
                         </div>
@@ -78,11 +79,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                 if (isset($_POST['submit'])) {
 
                     $nama = $_POST['nama'];
-                    $email = $_POST['email'];
+                    $username = $_POST['username'];
                     $password = $_POST['password'];
 
                     // print_r($username);
-                    $query = "UPDATE user_register SET nama = '$nama', email = '$email', password = '$password' WHERE id = '$id'";
+                    $query = "UPDATE user_register SET nama = '$nama', username = '$username', password = '$password' WHERE id = '$id'";
                     // print_r($query);
 
                     $result = mysqli_query($koneksi, $query);

@@ -62,7 +62,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                             <td><?= $nomer++ ?></td>
                                             <td hidden><?= $noid ?></td>
                                             <td><?= $data['nama'] ?></td>
-                                            <td><?= $data['email'] ?></td>
+                                            <td><?= $data['username'] ?></td>
                                             <td><?= $data['password'] ?></td>
                                             <td>
                                                 <a href="edit-user.php?id=<?= $noid?>">

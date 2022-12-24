@@ -49,7 +49,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                                 </div>
                                                 <p class="mt-3 ">
                                                     <button type="submit" name="submit" class="btn btn-outline-success my-2" style="width:20%">Save</button>
-                                                    <button class="btn btn-outline-warning my-2" style="width:20%">Reset</button>
+                                                    <a href="dashboard.php" class="btn btn-outline-warning" name="back" type="submit" style="width:20%">Back</a>
                                                 </p>
                                                 <?php
                                                 include "koneksi.php";
