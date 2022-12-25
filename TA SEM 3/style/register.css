@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #dfe9f5;
+    background: #e9aeda;
 }
 
 .wrapper{
@@ -46,11 +46,11 @@ button{
     width: 90%;
     color: #fff;
     cursor: pointer;
-    background:rgba(17, 107, 143);
+    background:rgb(247, 158, 207);
 }
 
 button:hover{
-    background: rgb(17, 107, 143, 0.877);
+    background:rgb(238, 69, 162);
 }
 
 input:focus{
