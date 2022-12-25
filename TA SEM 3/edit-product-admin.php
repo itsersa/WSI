@@ -37,7 +37,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                             ?>
                             <div class="col-xl-3 col-md-1">
                                 <div class="card" style="width: 180px;">
-                                    <img style="width: 180px" ; src="gambar/<?= $data['image'] ?>" class="card-img-top" alt="admin logo">
+                                    <img id="frame" style="width: 180px" ; src="gambar/<?= $data['image'] ?>" class="card-img-top" alt="admin logo">
                                 </div>
                             </div>
 
@@ -48,13 +48,34 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                     <input type="text" class="form-control" name="nama" id="inputNama" value="<?= $data['nama_produk'] ?>">
                                 </div>
                                 <div class="mb-2">
-                                    <label for="inputHarga">Harga :</label>
-                                    <input type="text" class="form-control" name="harga" id="inputHarga" value="<?= $data['harga'] ?>">
+                                    <span id="formatRupiah" for="inputHarga">Harga :</span>
+                                    <input type="text" class="form-control" name="harga" id="rupiah" value="<?= $data['harga'] ?>" placeholder="rupiah" onkeyup="document.getElementById('formatRupiah').innerHTML = formatCurrency(this.value);">
                                 </div>
+                                <script type="text/javascript">
+                                    function formatCurrency(rupiah) {
+                                        rupiah = rupiah.toString().replace(/\$|\,/g, '');
+                                        if (isNaN(rupiah))
+                                            rupiah = 0;
+                                        sign = (rupiah == (rupiah = Math.abs(rupiah)));
+                                        rupiah = Math.floor(rupiah * 100 + 0.50000000001);
+                                        cents = rupiah % 100;
+                                        rupiah = Math.floor(rupiah / 100).toString();
+                                        if (cents < 10)
+                                            cents = "0" + cents;
+                                        for (var i = 0; i < Math.floor((rupiah.length - (1 + i)) / 3); i++)
+                                            rupiah = rupiah.substring(0, rupiah.length - (4 * i + 3)) + '.' + rupiah.substring(rupiah.length - (4 * i + 3));
+                                        return (((sign) ? '' : '-') + 'Rp.' + rupiah + ',' + cents);
+                                    }
+                                </script>
                                 <div class="mb-2">
                                     <label for="inputPicture">Foto Produk :</label>
-                                    <input type="file" class="form-control" id="inputPicture" name="gambarProduk">
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarProduk" onchange="preview()">
                                 </div>
+                                <script>
+                                    function preview() {
+                                        frame.src = URL.createObjectURL(event.target.files[0]);
+                                    }
+                                </script>
 
                             </div>
 

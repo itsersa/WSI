@@ -35,9 +35,25 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                                     <input type="text" class="form-control" id="inputNama" name="nama">
                                                 </div>
                                                 <div class="mb-2">
-                                                    <label for="inputHarga">Harga :</label>
-                                                    <input type="number" class="form-control" id="inputHarga" name="harga">
+                                                    <span id="formatRupiah" for="inputHarga">Harga :</span>
+                                                    <input type="text" class="form-control" name="harga" id="rupiah" placeholder="rupiah" onkeyup="document.getElementById('formatRupiah').innerHTML = formatCurrency(this.value);">
                                                 </div>
+                                                <script type="text/javascript">
+                                                    function formatCurrency(rupiah) {
+                                                        rupiah = rupiah.toString().replace(/\$|\,/g, '');
+                                                        if (isNaN(rupiah))
+                                                            rupiah = 0;
+                                                        sign = (rupiah == (rupiah = Math.abs(rupiah)));
+                                                        rupiah = Math.floor(rupiah * 100 + 0.50000000001);
+                                                        cents = rupiah % 100;
+                                                        rupiah = Math.floor(rupiah / 100).toString();
+                                                        if (cents < 10)
+                                                            cents = "0" + cents;
+                                                        for (var i = 0; i < Math.floor((rupiah.length - (1 + i)) / 3); i++)
+                                                            rupiah = rupiah.substring(0, rupiah.length - (4 * i + 3)) + '.' + rupiah.substring(rupiah.length - (4 * i + 3));
+                                                        return (((sign) ? '' : '-') + 'Rp.' + rupiah + ',' + cents);
+                                                    }
+                                                </script>
                                                 <div class="mb-2">
                                                     <label for="inputDetail">Detail Produk :</label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="detail"></textarea>
@@ -125,9 +141,9 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                     $query = mysqli_query($koneksi, "SELECT * FROM produk");
                                     while ($data = mysqli_fetch_array($query)) :
                                     ?>
-                                        <div class="col">
+                                        <div class="col-md-3">
                                             <div class="card shadow-sm">
-                                                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="gambar/<?= $data['image'] ?>" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                                <img class="bd-placeholder-img card-img-top" height="225" src="gambar/<?= $data['image'] ?>" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 
                                                 <div class="card-body">
                                                     <h3 class="card-text"><?= $data['nama_produk'] ?></h3>

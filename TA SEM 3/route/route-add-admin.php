@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
                                          '$password_admin', 
                                          '$jabatan_admin'
                                      )";
-                print_r($query);
+                // print_r($query);
                 $result = mysqli_query($koneksi, $query);
                 if ($result == true) {
                     $txt = "Berhasil Menambah Admin!";
@@ -62,6 +62,8 @@ if (isset($_POST['submit'])) {
                 $txt = "Format Tidak Didukung";
                 header("Location: ../add-admin.php?error=$txt");
             }
+            $txt = "Masukkan Data Form";
+            header("Location: ../add-admin.php?error=$txt");
         }
     } else {
         $txt = "gagal!";

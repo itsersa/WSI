@@ -34,7 +34,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                             ?>
                             <div class="col-xl-3 col-md-1">
                                 <div class="card" style="width: 180px;">
-                                    <img style="width: 180px" ; src="gambar/<?= $data['foto_karyawan'] ?>" class="card-img-top" alt="admin logo">
+                                    <img id="frame" style="width: 180px" ; src="gambar/<?= $data['foto_karyawan'] ?>" class="card-img-top" alt="admin logo">
                                 </div>
                             </div>
 
@@ -50,8 +50,13 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 </div>
                                 <div class="mb-2">
                                     <label for="inputPicture">Picture :</label>
-                                    <input type="file" class="form-control" id="inputPicture" name="gambarAdmin">
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarAdmin" onchange="preview()">
                                 </div>
+                                <script>
+                                    function preview() {
+                                        frame.src = URL.createObjectURL(event.target.files[0]);
+                                    }
+                                </script>
                             </div>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->

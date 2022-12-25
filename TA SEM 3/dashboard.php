@@ -39,7 +39,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                             include "koneksi.php";
 
                             $label = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-                            $tahun = "Y";
                             for ($bulan = 1; $bulan < 13; $bulan++) {
                                 $sql = "SELECT COUNT(ipaddress) as pelacak, waktu_visit as bulan FROM visitor WHERE month(waktu_visit)='$bulan'";
                                 $query = mysqli_query($koneksi, $sql);
@@ -52,13 +51,12 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
 
                             // proses penghapusan data
                             $sql2 = "DELETE FROM visitor WHERE year(waktu_visit) < $lama";
-                            // print_r($sql2);
                             $hasil = mysqli_query($koneksi, $sql2);
                             ?>
                             <div class="card mb-4">
                                 <div class="card-header">
-                                    <i class="fas fa-chart-bar me-1"></i>
-                                    Bar Chart Example
+                                    <i class="fas fa-chart-line me-1"></i>
+                                    Line Chart Example
                                 </div>
                                 <div class="card-body">
                                     <canvas id="graphCanvas" width="100%" height="40"></canvas>
