@@ -54,6 +54,35 @@ nav a:hover {
     color: rgb(137, 50, 97);
 }
 
-.under{
-    padding: 100px 0 100px 0 ;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.row .content {
+    flex: 1 1 40rem;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(3rem);
+    }
+
+}
+
+.row .content h2 {
+    font-size: 2rem;
+    color: rgb(150, 58, 58);
+    text-align: left;
+    padding-left: 50px;
 }
