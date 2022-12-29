@@ -14,7 +14,7 @@ body{
 
 .section{
 	width: 100%;
-	min-height: 100vh;
+	min-height: 500px;
 	background-color: rgb(255, 255, 255);
 }
 .container{
@@ -203,7 +203,7 @@ h2{
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
- 
+    padding-top: 30px;
  }
  
  .col {
