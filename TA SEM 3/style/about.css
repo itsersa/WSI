@@ -59,7 +59,6 @@ body{
 	text-decoration: none;
 	color:#fff;
 	font-size: 25px;
-	letter-spacing: 1px;
 }
 .content-section .content .button a:hover{
 	background-color: #a52a2a;
@@ -101,7 +100,6 @@ body{
 .content-section .content .button a{
 	padding:9px 30px;
 }
-
 }
 .container1{
     background-color: #ffdcdc;
