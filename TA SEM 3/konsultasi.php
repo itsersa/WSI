@@ -77,8 +77,8 @@
                 <h3>Links <div class="underline"><span></span></h3>
                 <ul>
                     <li><a href="index2.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="konsultasi.html">Konsultasi</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="konsultasi.php">Konsultasi</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
             </div>
