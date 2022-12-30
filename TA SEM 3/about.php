@@ -21,10 +21,10 @@
 				</div>
 				<div class="content">
 					<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat.</p>
+					<p>Melodi merupakan toko kosmetik yang menjual berbagai macam produk kecantikan.
+            Bukan hanya menjual produk kecantikan saja, toko kosmetik melodi juga membuka konsultasi bagi para customer yang ingin mengetahui bagaimana kondisi muka mereka dan produk seperti apa yang mereka butuhkan, dan jangan khawatir karena 
+            Pastinya melodi menawarkan produk serta treatment terbaik untuk para konsumen yang datang ke toko.
+          </p>
 					<div class="button">
 						<a href="">Belanja di sini!</a>
 					</div>
