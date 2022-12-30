@@ -1,6 +1,3 @@
-<php?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
-    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/about.css?=<php? echo time(); ?>">
     <script src="https://kit.fontawesome.com/3dba02c49c.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cb08e330cf.js"></script>
 </head>
