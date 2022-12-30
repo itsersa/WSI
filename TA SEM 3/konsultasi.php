@@ -25,7 +25,7 @@
                         3. <br>
                     </p>
                     <div class="button">
-						<a href="">Konsultasi</a>
+						<a href="https://api.whatsapp.com/send?phone=628123090093">Konsultasi</a>
 					</div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         3. <br>
                     </p>
                     <div class="button-off">
-						<a href="">Konsultasi</a>
+						<a href="https://api.whatsapp.com/send?phone=628123090093">Konsultasi</a>
 					</div>
                 </div>
             </div>
