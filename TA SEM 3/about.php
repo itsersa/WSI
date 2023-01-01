@@ -21,7 +21,7 @@
 					<h3>Seklias tentang Melody Beauty</h3>
 					<p>Melody Beauty merupakan toko kosmetik yang menjual berbagai macam produk kecantikan.
             Bukan hanya menjual produk kecantikan saja, toko kosmetik melodi juga membuka konsultasi bagi para customer yang ingin mengetahui bagaimana kondisi muka mereka dan produk seperti apa yang mereka butuhkan, dan jangan khawatir karena 
-            Pastinya melodi menawarkan produk serta treatment terbaik untuk para konsumen yang datang ke toko.
+            pastinya melodi menawarkan produk serta treatment terbaik untuk para konsumen yang datang ke toko.
           </p>
 					<div class="button">
 						<a href="https://shopee.co.id/agenkosmetik_khusnul">Belanja di sini!</a>

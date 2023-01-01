@@ -38,7 +38,7 @@
       <a href="#home" class="logo"><img src="img/Melody.png" alt=""></a>
 
       <nav class="navbar">
-         <a href="index2.html">Home</a>
+         <a href="index2.php">Home</a>
          <a href="about.php">About</a>
          <a href="konsultasi.php">Konsultasi</a>
          <a href="#">Contact</a>
@@ -692,7 +692,7 @@
        <div class="col">
            <h3>Links <div class="underline"><span></span></h3>
            <ul>
-               <li><a href="index2.html">Home</a></li>
+               <li><a href="index2.php">Home</a></li>
                <li><a href="about.php">About</a></li>
                <li><a href="konsultasi.php">Konsultasi</a></li>
                <li><a href="">Contact</a></li>
