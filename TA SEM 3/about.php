@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/cb08e330cf.js"></script>
 </head>
 <body>
+<?php include '../TA SEM 3/header.php'; ?>
     <div class="section">
 		<div class="container">
 			<div class="content-section">
@@ -17,13 +18,13 @@
 					<h1>About Us</h1>
 				</div>
 				<div class="content">
-					<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
-					<p>Melodi merupakan toko kosmetik yang menjual berbagai macam produk kecantikan.
+					<h3>Seklias tentang Melody Beauty</h3>
+					<p>Melody Beauty merupakan toko kosmetik yang menjual berbagai macam produk kecantikan.
             Bukan hanya menjual produk kecantikan saja, toko kosmetik melodi juga membuka konsultasi bagi para customer yang ingin mengetahui bagaimana kondisi muka mereka dan produk seperti apa yang mereka butuhkan, dan jangan khawatir karena 
             Pastinya melodi menawarkan produk serta treatment terbaik untuk para konsumen yang datang ke toko.
           </p>
 					<div class="button">
-						<a href="">Belanja di sini!</a>
+						<a href="https://shopee.co.id/agenkosmetik_khusnul">Belanja di sini!</a>
 					</div>
 				</div>
 			</div>
@@ -122,10 +123,10 @@
             <div class="col">
                 <h3>Links <div class="underline"><span></span></h3>
                 <ul>
-                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="index2.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="konsultasi.php">Konsultasi</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
             <div class="col">

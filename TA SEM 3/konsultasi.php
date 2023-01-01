@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/cb08e330cf.js" ></script>
 </head>
 <body>
+<?php include '../TA SEM 3/header.php'; ?>
     <div class="section">
         <div class="container">
             <div class="content-section">
@@ -25,7 +26,7 @@
                         3. <br>
                     </p>
                     <div class="button">
-						<a href="https://api.whatsapp.com/send?phone=628123090093">Konsultasi</a>
+						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
 					</div>
                 </div>
             </div>
@@ -50,7 +51,7 @@
                         3. <br>
                     </p>
                     <div class="button-off">
-						<a href="https://api.whatsapp.com/send?phone=628123090093">Konsultasi</a>
+						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
 					</div>
                 </div>
             </div>
@@ -76,10 +77,10 @@
             <div class="col">
                 <h3>Links <div class="underline"><span></span></h3>
                 <ul>
-                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="index2.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="konsultasi.php">Konsultasi</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
             <div class="col">
