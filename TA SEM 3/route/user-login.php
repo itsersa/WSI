@@ -2,8 +2,6 @@
 
 include "../koneksi.php";
 
-session_start();
-
 if (isset($_POST['username']) && isset($_POST['password'])) {
     function test_input($data)
     {
@@ -31,13 +29,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
             echo "<pre>";
-            // print_r($row);
+            print_r($row);
             if ($row['username'] === $username && $row['password'] == $password) {
-                $_SESSION['id'] = $row['id'];
-                $_SESSION['username-user'] = $row['username'];
-                $_SESSION['password-user'] = $row['password'];
-
-                print_r($_SESSION);
+                // print_r($_SESSION);
                 echo "<script>alert('berhasil')</script>";
                 // header("Location: ../dashboard.php");
             }
