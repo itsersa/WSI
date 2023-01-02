@@ -6,25 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konsultasi</title>
     <link rel="stylesheet" href="style/konsul.css?=<php? echo time(); ?>">
+    <link rel="stylesheet" href="konsul.css?=<php? echo time(); ?>">
     <script src="https://kit.fontawesome.com/3dba02c49c.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cb08e330cf.js" ></script>
 </head>
 <body>
-<?php include '../TA SEM 3/header.php'; ?>
+<?= include ('./partials/header.php') ?>
     <div class="section">
         <div class="container">
             <div class="content-section">
                 <div class="title">
-                    <h1>Konsultasi</h1>
+                    <h1>Yuk Konsultasikan Jenis Kulitmu !</h1>
                 </div>
                 <div class="content">
-                    <h3>Layanan Konsultasi Online by Melody Beauty</h3>
-                    <p> Layanan konsultasi Online bisa dilakukan melalui via WhatsApp dengan menghubungi nomor di bawah ini. 
-                        Langkah-langkah untuk melakukan konsultasi online sebagai berikut<br>
-                        1. <br>
-                        2. <br>
-                        3. <br>
-                    </p>
+                    <p> Pakai skincare tapi tidak cocok? Yuk coba konsultasikan jenis kulitmu agar tidak salah memilih produk skincare yang cocok</p>
                     <div class="button">
 						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
 					</div>
@@ -40,15 +35,13 @@
         <div class="container-off">
             <div class="content-section-off">
                 <div class="title-off">
-                    <h1>Konsultasi</h1>
+                    <h1>Konsultasi Langsung</h1>
                 </div>
                 <div class="content-off">
-                    <h3>Layanan Konsultasi Offline by Melody Beauty</h3>
-                    <p> Layanan konsultasi Offline bisa dilakukan langsung pada toko Melody Beauty. Sebelum melakukan konsultasi secara offline diharap untuk membuat jadwal terlebih dahulu agar bisa mendapatkan waktu yang tepat. 
-                        Langkah-langkah untuk melakukan konsultasi offline sebagai berikut<br>
-                        1. <br>
-                        2. <br>
-                        3. <br>
+                    <p> Konsultasi Langsung Akan Memudahkan Anda Mengetahui Jenis Kulit Dengan Lebih Akurat Dan Lebih Mudah Menentukan Jenis Produk Yang Sesuai Dengan Jenis Kulit Anda. Lakukan Reservasi Konsultasi Langsung Dengan Cara: <br>
+                        1. Kunjungi Melody Beauty Store <br>
+                        2. Konsultasi Dan Cek Jenis Kulit Gratis Dengan Minimal Pembelian Rp.300.000,- <br>
+                        3. Jika Ingin Melakukan Konsultasi Dan Cek Jenis Kulit Tanpa Minimal Pembelian, Maka Pilih Layanan Berbayar Senilai Rp.50.000,- <br>
                     </p>
                     <div class="button-off">
 						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
@@ -56,10 +49,33 @@
                 </div>
             </div>
             <div class="image-section-off">
-                <img src="img/konsultasi-removebg.png">
+                <img src="img/Konsul Langsung.png">
             </div>
         </div>
     </div>
+
+    <div class="section-off1">
+        <div class="container-off1">
+            <div class="content-section-off1">
+                <div class="title-off1">
+                    <h1>Konsultasi Online</h1>
+                </div>
+                <div class="content-off1">
+                    <p> Bingung Menentukan Produk Kosmetik Yang Sesuai? Dapatkan Layanan Konsultasi Online Untuk Menentukan Produk Yang Sesuai Dengan Jenis Kulit Anda. Lakukan Mudah Dengan Hanya Sekali Klik: <br>
+                    1. Konsultasi Online Dapat Dilakukan Sebelum Pembelian Produk. <br>
+                    2. Dapat Melalui Chat WhatsApp Dengan Admin. <br>
+                    3. Tanpa Minimal Pembelian. <br>
+                    </p>
+                    <div class="button-off1">
+						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
+					</div>
+                </div>
+            </div>
+            <div class="image-section-off1">
+                <img src="img/Konsul online.png">
+            </div>
+        </div>
+    </div>
 
     <?= include('./partials/footer.php') ?>
 
