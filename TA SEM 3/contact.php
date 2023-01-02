@@ -79,49 +79,18 @@
         </div>
 
         <div class="box-container">
+            <?php
 
-            <div class="box">
-                <img src="img/2.png" alt="">
-                <h3>Ratu Arab</h3>
+            include "koneksi.php";
 
-            </div>
-
-            <div class="box">
-                <img src="img/3.png" alt="">
-                <h3>MS Glow</h3>
-
-            </div>
-
-            <div class="box">
-                <img src="img/4.png" alt="">
-                <h3>Fameux</h3>
-            </div>
-
-            <div class="box">
-                <img src="img/5.png" alt="">
-                <h3>E glow</h3>
-            </div>
-
-            <div class="box">
-                <img src="img/6.png" alt="">
-                <h3>beauvrys</h3>
-            </div>
-
-            <div class="box">
-                <img src="img/7.png" alt="">
-                <h3>Beauty Rosa</h3>
-            </div>
-
-            <div class="box">
-                <img src="img/8.png" alt="">
-                <h3>BG Skin</h3>
-            </div>
-
-            <div class="box">
-                <img src="img/9.png" alt="">
-                <h3>Scarlett</h3>
-            </div>
-
+            $query = mysqli_query($koneksi, "SELECT * FROM produk");
+            while ($data = mysqli_fetch_array($query)) :
+            ?>
+                <div class="box">
+                    <img src="gambar/<?= $data['imageUtama'] ?>" alt="">
+                    <h3><?= $data['nama_produk'] ?></h3>
+                </div>
+            <?php endwhile; ?>
 
         </div>
 
