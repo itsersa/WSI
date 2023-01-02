@@ -139,7 +139,7 @@
                 <div class="social-icons">
                     <a href="https://www.instagram.com/melodybeauty29/"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@melodybeauty29"><i class="fa-brands fa-tiktok"></i></a>
-                    <i class="fa-brands fa-facebook-f"></i>
+                    <a href="https://www.facebook.com/groups/1126513934036715/"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=6281331600029"> <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
