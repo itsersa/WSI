@@ -7,14 +7,6 @@
     <title>Konsultasi</title>
     <link rel="stylesheet" href="style/konsul.css?=<php? echo time(); ?>">
     <link rel="stylesheet" href="konsul.css?=<php? echo time(); ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/3dba02c49c.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/cb08e330cf.js"></script>
     <script src="https://kit.fontawesome.com/3dba02c49c.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cb08e330cf.js" ></script>
 </head>
@@ -39,47 +31,53 @@
         </div>
     </div>
 
-    <section class="konsul" id="konsul">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="card-deck">
-                    <div class="card" style="text-align: center; margin-left: 20px; margin-right: 20px; width: 100%;">
-                        <img src="img/Konsul online.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title">Konsultasi Online</h3>
-                            <p class="card-text" style="font-size: 14px; text-align: left;">Bingung menentukan produk kosmetik yang sesuai? Dapatkan layanan konsultasi Online untuk menentukan produk yang sesuai dengan jenis kulit Anda. Lakukan mudah dengan hanya sekali klik:<br>
-                                <br>1. Konsultasi online dapat dilakukan sebelum pembelian produk.
-                                <br>2. Dapat melalui chat WhatsApp dengan admin.
-                                <br>3. Tanpa minimal pembelian.
-                                <br>
-
-                            </p>
-                            <a href="#" class="btn">Konsultasi Online</a>
-                        </div>
-                    </div>
-                    <div class="card" style="text-align: center;  margin-left: 20px; margin-right: 20px width: 100%;">
-                        <img src="img/Konsul Langsung.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title">Konsultasi Langsung</h3>
-                            <p class="card-text" style="font-size: 14px; text-align: left;">Konsultasi langsung akan memudahkan Anda mengetahui jenis kulit dengan lebih akurat dan lebih mudah menentukan jenis produk yang sesuai dengan jenis kulit Anda. Lakukan reservasi konsultasi langsung dengan cara:<br>
-                                <br>1. Kunjungi Melody Beauty Store
-                                <br>2. konsultasi dan cek jenis kulit gratis dengan minimal pembelian Rp.300.000,-
-                                <br>3. Jika ingin melakukan konsultasi dan cek jenis kulit tanpa minimal pembelian, maka pilih layanan berbayar senilai Rp.50.000,-
-                            </p>
-                            <a href="#" class="btn">Konsultasi Langsung</a>
-                        </div>
-                    </div>
+    <div class="section-off">
+        <div class="container-off">
+            <div class="content-section-off">
+                <div class="title-off">
+                    <h1>Konsultasi Langsung</h1>
+                </div>
+                <div class="content-off">
+                    <p> Konsultasi Langsung Akan Memudahkan Anda Mengetahui Jenis Kulit Dengan Lebih Akurat Dan Lebih Mudah Menentukan Jenis Produk Yang Sesuai Dengan Jenis Kulit Anda. Lakukan Reservasi Konsultasi Langsung Dengan Cara: <br>
+                        1. Kunjungi Melody Beauty Store <br>
+                        2. Konsultasi Dan Cek Jenis Kulit Gratis Dengan Minimal Pembelian Rp.300.000,- <br>
+                        3. Jika Ingin Melakukan Konsultasi Dan Cek Jenis Kulit Tanpa Minimal Pembelian, Maka Pilih Layanan Berbayar Senilai Rp.50.000,- <br>
+                    </p>
+                    <div class="button-off">
+						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
+					</div>
                 </div>
             </div>
+            <div class="image-section-off">
+                <img src="img/Konsul Langsung.png">
+            </div>
         </div>
+    </div>
 
-    </section>
+    <div class="section-off1">
+        <div class="container-off1">
+            <div class="content-section-off1">
+                <div class="title-off1">
+                    <h1>Konsultasi Online</h1>
+                </div>
+                <div class="content-off1">
+                    <p> Bingung Menentukan Produk Kosmetik Yang Sesuai? Dapatkan Layanan Konsultasi Online Untuk Menentukan Produk Yang Sesuai Dengan Jenis Kulit Anda. Lakukan Mudah Dengan Hanya Sekali Klik: <br>
+                    1. Konsultasi Online Dapat Dilakukan Sebelum Pembelian Produk. <br>
+                    2. Dapat Melalui Chat WhatsApp Dengan Admin. <br>
+                    3. Tanpa Minimal Pembelian. <br>
+                    </p>
+                    <div class="button-off1">
+						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
+					</div>
+                </div>
+            </div>
+            <div class="image-section-off1">
+                <img src="img/Konsul online.png">
+            </div>
+        </div>
+    </div>
 
     <?= include('./partials/footer.php') ?>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
