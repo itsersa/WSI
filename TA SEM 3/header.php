@@ -8,7 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
-    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/header.css?=<php? echo time(); ?">
+    <script src="https://kit.fontawesome.com/3dba02c49c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cb08e330cf.js"></script>
 </head>
 <body>
 <header class="header">
@@ -18,13 +20,17 @@
    <a href="index2.php" class="logo"><img src="img/Melody.png" alt=""></a>
 
    <nav class="navbar">
-      <a href="index2.php">Home</a>
-      <a href="about.php">About</a>
-      <a href="konsultasi.php">Konsultasi</a>
-      <a href="contact.php">Contact</a>
-   </nav>
-
-   <div id="menu-btn" class="fas fa-bars"></div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+               <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+            <li class="items"><a href="index2.php">Home</a></li>
+            <li class="items"><a href="about.php">About</a></li>
+            <li class="items"><a href="konsultasi.php">Konsultasi</a></li>
+            <li class="items"><a href="contact.php">Contact</a></li>
+            </ul>
+         </nav>
 
 </section>
 
