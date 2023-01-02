@@ -138,7 +138,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h4 class="text-primary mb-0">+62 81331600029</h4>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Email</h5>
-                            <h4 class="text-primary mb-0">info@example.com</h4>
+                            <h4 class="text-primary mb-0">melodybeauty@gmail.com</h4>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Visit our Store</h5>
-                            <h4 class="text-primary mb-0">Sumbersari, Jember</h4>
+                            <h4 class="text-primary mb-0">Ruko Mastrip Square Blok C, Sumbersari, Jember</h4>
                         </div>
                     </div>
                 </div>
