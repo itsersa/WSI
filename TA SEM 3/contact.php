@@ -236,7 +236,7 @@
         </div>
     </div>
     <hr>
-    <p class="copyright">Melody Beauty @ 2022 - All Rights Reserved</p>
+    <p class="copyright">Melody Beauty @ 2023 - All Rights Reserved</p>
  </footer>
  
  
