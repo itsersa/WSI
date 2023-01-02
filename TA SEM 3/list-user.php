@@ -34,7 +34,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                         <th>No</th>
                                         <th hidden>Noid</th>
                                         <th>Nama</th>
-                                        <th>Email</th>
+                                        <th>Username</th>
                                         <th>Password</th>
                                         <th>Action</th>
                                     </tr>
@@ -44,7 +44,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                         <th>No</th>
                                         <th hidden>Noid</th>
                                         <th>Nama</th>
-                                        <th>Email</th>
+                                        <th>Username</th>
                                         <th>Password</th>
                                         <th>Action</th>
                                     </tr>

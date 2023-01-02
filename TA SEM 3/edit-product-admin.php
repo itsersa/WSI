@@ -48,42 +48,34 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                     <input type="text" class="form-control" name="nama" id="inputNama" value="<?= $data['nama_produk'] ?>">
                                 </div>
                                 <div class="mb-2">
-                                    <span id="formatRupiah" for="inputHarga">Harga :</span>
-                                    <input type="text" class="form-control" name="harga" id="rupiah" value="<?= $data['harga'] ?>" placeholder="rupiah" onkeyup="document.getElementById('formatRupiah').innerHTML = formatCurrency(this.value);">
+                                    <label for="inputPicture">Foto Produk 1 :</label>
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarProduk">
                                 </div>
-                                <script type="text/javascript">
-                                    function formatCurrency(rupiah) {
-                                        rupiah = rupiah.toString().replace(/\$|\,/g, '');
-                                        if (isNaN(rupiah))
-                                            rupiah = 0;
-                                        sign = (rupiah == (rupiah = Math.abs(rupiah)));
-                                        rupiah = Math.floor(rupiah * 100 + 0.50000000001);
-                                        cents = rupiah % 100;
-                                        rupiah = Math.floor(rupiah / 100).toString();
-                                        if (cents < 10)
-                                            cents = "0" + cents;
-                                        for (var i = 0; i < Math.floor((rupiah.length - (1 + i)) / 3); i++)
-                                            rupiah = rupiah.substring(0, rupiah.length - (4 * i + 3)) + '.' + rupiah.substring(rupiah.length - (4 * i + 3));
-                                        return (((sign) ? '' : '-') + 'Rp.' + rupiah + ',' + cents);
-                                    }
-                                </script>
                                 <div class="mb-2">
-                                    <label for="inputPicture">Foto Produk :</label>
-                                    <input type="file" class="form-control" id="inputPicture" name="gambarProduk" onchange="preview()">
+                                    <label for="inputPicture">Foto Produk 2 :</label>
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarProduk2">
                                 </div>
-                                <script>
-                                    function preview() {
-                                        frame.src = URL.createObjectURL(event.target.files[0]);
-                                    }
-                                </script>
-
                             </div>
 
                             <!-- MENAMPILKAN SESSION DATA ADMIN -->
                             <div class="form-group col-md-3">
                                 <div class="mb-2">
-                                    <label for="inputDeskripsi">Deskripsi Produk :</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" name="detail"><?= $data['deskripsi_produk'] ?></textarea>
+                                    <label for="inputPicture">Foto Produk 3 :</label>
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarProduk3">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="inputPicture">Foto Produk 4 :</label>
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarProduk4">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="inputPicture">Foto Produk 5 :</label>
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarProduk5">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <div class="mb-2">
+                                    <label for="inputPicture">Foto Utama :</label>
+                                    <input type="file" class="form-control" id="inputPicture" name="gambarUtama">
                                 </div>
                                 <p class="mt-2 ">
                                     <button class="btn btn-outline-success" style="width:49%" name="submit" type="submit" onclick="return confirm('Refresh setelah ubah data')">Update</button>
@@ -100,18 +92,67 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
 
                     // FORM
                     $nama_produk = $_POST['nama'];
-                    $harga_produk = $_POST['harga'];
-                    $detail_produk = $_POST['detail'];
 
                     // IMAGE
                     echo "<pre>";
-                    print_r($detail_produk);
+
+                    $img_name_utama = $_FILES['gambarUtama']['name'];
+                    $img_size_utama = $_FILES['gambarUtama']['size'];
+                    $tmp_name_utama = $_FILES['gambarUtama']['tmp_name'];
+                    $error_utama = $_FILES['gambarUtama']['error'];
 
                     $img_name = $_FILES['gambarProduk']['name'];
                     $img_size = $_FILES['gambarProduk']['size'];
                     $tmp_name = $_FILES['gambarProduk']['tmp_name'];
                     $error = $_FILES['gambarProduk']['error'];
 
+                    $img_name2 = $_FILES['gambarProduk2']['name'];
+                    $img_size2 = $_FILES['gambarProduk2']['size'];
+                    $tmp_name2 = $_FILES['gambarProduk2']['tmp_name'];
+                    $error2 = $_FILES['gambarProduk2']['error'];
+
+                    $img_name3 = $_FILES['gambarProduk3']['name'];
+                    $img_size3 = $_FILES['gambarProduk3']['size'];
+                    $tmp_name3 = $_FILES['gambarProduk3']['tmp_name'];
+                    $error3 = $_FILES['gambarProduk3']['error'];
+
+                    $img_name4 = $_FILES['gambarProduk4']['name'];
+                    $img_size4 = $_FILES['gambarProduk4']['size'];
+                    $tmp_name4 = $_FILES['gambarProduk4']['tmp_name'];
+                    $error4 = $_FILES['gambarProduk4']['error'];
+
+                    $img_name5 = $_FILES['gambarProduk5']['name'];
+                    $img_size5 = $_FILES['gambarProduk5']['size'];
+                    $tmp_name5 = $_FILES['gambarProduk5']['tmp_name'];
+                    $error5 = $_FILES['gambarProduk5']['error'];
+
+
+                    if ($error_utama === 0) {
+                        if ($img_size_utama > 1250000) {
+                            $txt = "File Terlalu Besar!";
+                            header("Location: edit-admin-table.php?error=$txt");
+                        } else {
+                            $img_ex_utama = pathinfo($img_name_utama, PATHINFO_EXTENSION);
+                            $img_ex_lc_utama = strtolower($img_ex_utama);
+
+                            $allowed_exs = array("jpg", "jpeg", "png");
+
+                            if (in_array($img_ex_lc_utama, $allowed_exs)) {
+                                $new_image_name_utama = uniqid("IMG-", true) . '.' . $img_ex_lc_utama;
+                                $img_upload_path_utama = 'gambar/' . $new_image_name_utama;
+                                move_uploaded_file($tmp_name_utama, $img_upload_path_utama);
+
+                                $query = "UPDATE produk SET nama_produk = '$nama_produk', imageUtama = '$new_image_name_utama' WHERE id = '$id'";
+                                print_r($query);
+
+                                $result = mysqli_query($koneksi, $query);
+                                echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
+                            } else {
+                                $txt = "Format Tidak Didukung";
+                                header("Location: edit-product-admin.php?error=$txt");
+                            }
+                        }
+                    }
                     if ($error === 0) {
                         if ($img_size > 1250000) {
                             $txt = "File Terlalu Besar!";
@@ -127,7 +168,111 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 $img_upload_path = 'gambar/' . $new_image_name;
                                 move_uploaded_file($tmp_name, $img_upload_path);
 
-                                $query = "UPDATE produk SET nama_produk = '$nama_produk', image = '$new_image_name', harga = '$harga_produk', deskripsi_produk = '$detail_produk' WHERE id = '$id'";
+                                $query = "UPDATE produk SET nama_produk = '$nama_produk', image = '$new_image_name' WHERE id = '$id'";
+                                print_r($query);
+
+                                $result = mysqli_query($koneksi, $query);
+                                echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
+                            } else {
+                                $txt = "Format Tidak Didukung";
+                                header("Location: edit-product-admin.php?error=$txt");
+                            }
+                        }
+                    }
+                    if ($error2 === 0) {
+                        if ($img_size2 > 1250000) {
+                            $txt = "File Terlalu Besar!";
+                            header("Location: edit-admin-table.php?error=$txt");
+                        } else {
+                            $img_ex2 = pathinfo($img_name2, PATHINFO_EXTENSION);
+                            $img_ex_lc2 = strtolower($img_ex2);
+
+                            $allowed_exs = array("jpg", "jpeg", "png");
+
+                            if (in_array($img_ex_lc2, $allowed_exs)) {
+                                $new_image_name2 = uniqid("IMG-", true) . '.' . $img_ex_lc2;
+                                $img_upload_path2 = 'gambar/' . $new_image_name2;
+                                move_uploaded_file($tmp_name2, $img_upload_path2);
+
+                                $query = "UPDATE produk SET nama_produk = '$nama_produk', image2 = '$new_image_name2' WHERE id = '$id'";
+                                print_r($query);
+
+                                $result = mysqli_query($koneksi, $query);
+                                echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
+                            } else {
+                                $txt = "Format Tidak Didukung";
+                                header("Location: edit-product-admin.php?error=$txt");
+                            }
+                        }
+                    }
+                    if ($error3 === 0) {
+                        if ($img_size3 > 1250000) {
+                            $txt = "File Terlalu Besar!";
+                            header("Location: edit-admin-table.php?error=$txt");
+                        } else {
+                            $img_ex3 = pathinfo($img_name3, PATHINFO_EXTENSION);
+                            $img_ex_lc3 = strtolower($img_ex3);
+
+                            $allowed_exs = array("jpg", "jpeg", "png");
+
+                            if (in_array($img_ex_lc3, $allowed_exs)) {
+                                $new_image_name3 = uniqid("IMG-", true) . '.' . $img_ex_lc3;
+                                $img_upload_path3 = 'gambar/' . $new_image_name3;
+                                move_uploaded_file($tmp_name3, $img_upload_path3);
+
+                                $query = "UPDATE produk SET nama_produk = '$nama_produk', image3 = '$new_image_name3' WHERE id = '$id'";
+                                print_r($query);
+
+                                $result = mysqli_query($koneksi, $query);
+                                echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
+                            } else {
+                                $txt = "Format Tidak Didukung";
+                                header("Location: edit-product-admin.php?error=$txt");
+                            }
+                        }
+                    }
+                    if ($error4 === 0) {
+                        if ($img_size4 > 1250000) {
+                            $txt = "File Terlalu Besar!";
+                            header("Location: edit-admin-table.php?error=$txt");
+                        } else {
+                            $img_ex4 = pathinfo($img_name4, PATHINFO_EXTENSION);
+                            $img_ex_lc4 = strtolower($img_ex4);
+
+                            $allowed_exs = array("jpg", "jpeg", "png");
+
+                            if (in_array($img_ex_lc4, $allowed_exs)) {
+                                $new_image_name4 = uniqid("IMG-", true) . '.' . $img_ex_lc4;
+                                $img_upload_path4 = 'gambar/' . $new_image_name4;
+                                move_uploaded_file($tmp_name4, $img_upload_path4);
+
+                                $query = "UPDATE produk SET nama_produk = '$nama_produk', image4 = '$new_image_name4' WHERE id = '$id'";
+                                print_r($query);
+
+                                $result = mysqli_query($koneksi, $query);
+                                echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
+                            } else {
+                                $txt = "Format Tidak Didukung";
+                                header("Location: edit-product-admin.php?error=$txt");
+                            }
+                        }
+                    }
+                    if ($error5 === 0) {
+                        if ($img_size5 > 1250000) {
+                            $txt = "File Terlalu Besar!";
+                            header("Location: edit-admin-table.php?error=$txt");
+                        } else {
+                            $img_ex5 = pathinfo($img_name5, PATHINFO_EXTENSION);
+                            $img_ex_lc5 = strtolower($img_ex5);
+
+                            $allowed_exs = array("jpg", "jpeg", "png");
+
+                            if (in_array($img_ex_lc5, $allowed_exs)) {
+                                $new_image_name5 = uniqid("IMG-", true) . '.' . $img_ex_lc5;
+                                $img_upload_path5 = 'gambar/' . $new_image_name5;
+                                move_uploaded_file($tmp_name5, $img_upload_path5);
+
+                                $query = "UPDATE produk SET nama_produk = '$nama_produk', image5 = '$new_image_name5' WHERE id = '$id'";
                                 print_r($query);
 
                                 $result = mysqli_query($koneksi, $query);
@@ -138,7 +283,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                             }
                         }
                     } else {
-                        $query = "UPDATE produk SET nama_produk = '$nama_produk', harga = '$harga_produk', deskripsi_produk = '$detail_produk' WHERE id = '$id'";
+                        $query = "UPDATE produk SET nama_produk = '$nama_produk' WHERE id = '$id'";
                         print_r($query);
 
                         $result = mysqli_query($koneksi, $query);

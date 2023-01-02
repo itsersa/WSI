@@ -19,7 +19,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                     <div class="row">
-                        <div class="col-xl-6">
+                        <!-- <div class="col-xl-6">
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <i class="fas fa-chart-area me-1"></i>
@@ -33,8 +33,8 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
 
                                 </script>
                             </div>
-                        </div>
-                        <div class="col-xl-6">
+                        </div> -->
+                        <div class="col-xl-12">
                             <?php
                             include "koneksi.php";
 
@@ -64,7 +64,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 <script>
                                     var ctx = document.getElementById("graphCanvas").getContext('2d');
                                     var graphCanvas = new Chart(ctx, {
-                                        type: 'line',
+                                        type: 'bar',
                                         data: {
                                             labels: <?php echo json_encode($label); ?>,
                                             datasets: [{

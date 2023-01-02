@@ -37,10 +37,10 @@
       <section class="flex">
          <a href="#home" class="logo"><img src="img/Melody.png" alt=""></a>
          <nav class="navbar">
-            <a href="index2.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="konsultasi.php">Konsultasi</a>
-            <a href="contact.php">Contact</a>
+            <a style="text-decoration:none" href="index2.php">Home</a>
+            <a style="text-decoration:none" href="about.php">About</a>
+            <a style="text-decoration:none" href="konsultasi.php">Konsultasi</a>
+            <a style="text-decoration:none" href="contact.php">Contact</a>
          </nav>
          <div id="menu-btn" class="fas fa-bars"></div>
       </section>
@@ -80,56 +80,20 @@
       </div>
 
       <div class="box-container">
+         <?php
 
-         <div class="box">
-            <img src="img/2.png" alt="">
-            <h3>Ratu Arab</h3>
-            <a href="#Ratu Arab" class="btn" style="height: 45px; width: 100px;">More</a>
+         include "koneksi.php";
 
-         </div>
+         $query = mysqli_query($koneksi, "SELECT * FROM produk");
+         while ($data = mysqli_fetch_array($query)) :
+         ?>
+            <div class="box">
+               <img src="gambar/<?= $data['imageUtama'] ?>" alt="">
+               <h3><?= $data['nama_produk']?></h3>
+               <a href="#Ratu Arab" class="btn" style="height: 45px; width: 100px;">More</a>
 
-         <div class="box">
-            <img src="img/3.png" alt="">
-            <h3>MS Glow</h3>
-            <a href="#MS Glow" class="btn" style="height: 45px; width: 100px;">More</a>
-
-         </div>
-
-         <div class="box">
-            <img src="img/4.png" alt="">
-            <h3>Fameux</h3>
-            <a href="#Fameux" class="btn" style="height: 45px; width: 100px;">More</a>
-         </div>
-
-         <div class="box">
-            <img src="img/5.png" alt="">
-            <h3>E glow</h3>
-            <a href="#E Glow" class="btn" style="height: 45px; width: 100px;">More</a>
-         </div>
-
-         <div class="box">
-            <img src="img/6.png" alt="">
-            <h3>beauvrys</h3>
-            <a href="#Beauvrys" class="btn" style="height: 45px; width: 100px;">More</a>
-         </div>
-
-         <div class="box">
-            <img src="img/7.png" alt="">
-            <h3>Beauty Rosa</h3>
-            <a href="#Beauty Rosa" class="btn" style="height: 45px; width: 100px;">More</a>
-         </div>
-
-         <div class="box">
-            <img src="img/8.png" alt="">
-            <h3>BG Skin</h3>
-            <a href="#BG Skin" class="btn" style="height: 45px; width: 100px;">More</a>
-         </div>
-
-         <div class="box">
-            <img src="img/9.png" alt="">
-            <h3>Scarlett</h3>
-            <a href="#Scarlett" class="btn" style="height: 45px; width: 100px;">More</a>
-         </div>
+            </div>
+         <?php endwhile; ?>
 
       </div>
 
@@ -139,487 +103,70 @@
       <div class="heading">
          <h3>Product Catalog</h3>
       </div>
-      <div class="text-catalog" id="Ratu Arab">
-         <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;">Ratu Arab</h4>
-      </div>
-      <div class="product_container bg-grid logo-slider slick_two">
+      <?php
 
-         <div class="container mt-3">
-            <div class="row responsive">
+      include "koneksi.php";
 
-               <div class="col-lg-4">
-                  <div class="card">
-                     <img class="card-img-top" src="img/ratuarab.jpg" alt="Card image" style="width:100%; height: 300px;">
-                     <div class="card-body">
-                        <h4 class="card-title" style="text-align: center;">Ratu Arab </h4>
+      $query = mysqli_query($koneksi, "SELECT * FROM produk");
+      while ($data = mysqli_fetch_array($query)) :
+      ?>
+         <div class="text-catalog" id="Ratu Arab">
+            <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;"><?= $data['nama_produk'] ?></h4>
+         </div>
+         <div class="product_container bg-grid logo-slider slick_two">
+            <div class="container mt-3">
+               <div class="row responsive">
 
+                  <div class="col-lg-4">
+                     <div class="card">
+                        <img class="card-img-top" src="gambar/<?= $data['image'] ?>" alt="Card image" style="width:100%; height: 300px;">
+                        <div class="card-body">
+                           <h4 class="card-title" style="text-align: center;"><?= $data['nama_produk'] ?></h4>
+
+                        </div>
                      </div>
                   </div>
-               </div>
+                  <div class="col-lg-4">
+                     <div class="card">
+                        <img class="card-img-top" src="gambar/<?= $data['image2'] ?>" alt="Card image" style="width:100%; height: 300px;">
+                        <div class="card-body">
+                           <h4 class="card-title" style="text-align: center;"><?= $data['nama_produk'] ?></h4>
 
-               <div class="col-lg-4">
-                  <div class="card">
-                     <img class="card-img-top" src="img/ratuarab1.jpg" alt="Card image" style="width:100%; height: 300px;">
-                     <div class="card-body">
-                        <h4 class="card-title" style="text-align: center;">Ratu Arab </h4>
-
+                        </div>
                      </div>
                   </div>
-               </div>
+                  <div class="col-lg-4">
+                     <div class="card">
+                        <img class="card-img-top" src="gambar/<?= $data['image3'] ?>" alt="Card image" style="width:100%; height: 300px;">
+                        <div class="card-body">
+                           <h4 class="card-title" style="text-align: center;"><?= $data['nama_produk'] ?></h4>
 
-               <div class="col-lg-4">
-                  <div class="card">
-                     <img class="card-img-top" src="img/ratuarab2.jpg" alt="Card image" style="width:100%; height: 300px;">
-                     <div class="card-body">
-                        <h4 class="card-title" style="text-align: center;">Ratu Arab </h4>
-
+                        </div>
                      </div>
                   </div>
-               </div>
+                  <div class="col-lg-4">
+                     <div class="card">
+                        <img class="card-img-top" src="gambar/<?= $data['image4'] ?>" alt="Card image" style="width:100%; height: 300px;">
+                        <div class="card-body">
+                           <h4 class="card-title" style="text-align: center;"><?= $data['nama_produk'] ?></h4>
 
-               <div class="col-lg-4">
-                  <div class="card">
-                     <img class="card-img-top" src="img/ratuarab3.jpg" alt="Card image" style="width:100%; height: 300px;">
-                     <div class="card-body">
-                        <h4 class="card-title" style="text-align: center;">Ratu Arab </h4>
-
+                        </div>
                      </div>
                   </div>
-               </div>
+                  <div class="col-lg-4">
+                     <div class="card">
+                        <img class="card-img-top" src="gambar/<?= $data['image5'] ?>" alt="Card image" style="width:100%; height: 300px;">
+                        <div class="card-body">
+                           <h4 class="card-title" style="text-align: center;"><?= $data['nama_produk'] ?></h4>
 
-               <div class="col-lg-4">
-                  <div class="card">
-                     <img class="card-img-top" src="img/ratuarab4.jpg" alt="Card image" style="width:100%; height: 300px;">
-                     <div class="card-body">
-                        <h4 class="card-title" style="text-align: center;">Ratu Arab </h4>
+                        </div>
                      </div>
                   </div>
-               </div>
 
+               </div>
             </div>
-            <div class="text-catalog" id="MS Glow">
-               <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;">MS Glow</h4>
-            </div>
-            <div class="product_container bg-grid logo-slider slick_two">
-
-               <div class="container mt-3">
-                  <div class="row responsive">
-
-                     <div class="col-lg-4">
-                        <div class="card">
-                           <img class="card-img-top" src="img/msglow1.jpg" alt="Card image" style="width:100%; height: 300px;">
-                           <div class="card-body">
-                              <h4 class="card-title" style="text-align: center;">MS Glow </h4>
-
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-lg-4">
-                        <div class="card">
-                           <img class="card-img-top" src="img/msglow2.jpg" alt="Card image" style="width:100%; height: 300px;">
-                           <div class="card-body">
-                              <h4 class="card-title" style="text-align: center;">MS Glow</h4>
-
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-lg-4">
-                        <div class="card">
-                           <img class="card-img-top" src="img/msglow3.jpg" alt="Card image" style="width:100%; height: 300px;">
-                           <div class="card-body">
-                              <h4 class="card-title" style="text-align: center;">MS Glow </h4>
-
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-lg-4">
-                        <div class="card">
-                           <img class="card-img-top" src="img/msglow4.jpg" alt="Card image" style="width:100%; height: 300px;">
-                           <div class="card-body">
-                              <h4 class="card-title" style="text-align: center;">MS Glow</h4>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-4">
-                        <div class="card">
-                           <img class="card-img-top" src="img/msglow5.jpeg" alt="Card image" style="width:100%; height: 300px;">
-                           <div class="card-body">
-                              <h4 class="card-title" style="text-align: center;">MS Glow </h4>
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="text-catalog" id="Fameux">
-                     <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;">Fameux</h4>
-                  </div>
-                  <div class="product_container bg-grid logo-slider slick_two">
-
-                     <div class="container mt-3">
-                        <div class="row responsive">
-
-                           <div class="col-lg-4">
-                              <div class="card">
-                                 <img class="card-img-top" src="img/fameux1.png" alt="Card image" style="width:100%; height: 300px;">
-                                 <div class="card-body">
-                                    <h4 class="card-title" style="text-align: center;">Fameux</h4>
-
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="col-lg-4">
-                              <div class="card">
-                                 <img class="card-img-top" src="img/fameux2.png" alt="Card image" style="width:100%; height: 300px;">
-                                 <div class="card-body">
-                                    <h4 class="card-title" style="text-align: center;">Fameux</h4>
-
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="col-lg-4">
-                              <div class="card">
-                                 <img class="card-img-top" src="img/fameux3.png" alt="Card image" style="width:100%; height: 300px;">
-                                 <div class="card-body">
-                                    <h4 class="card-title" style="text-align: center;">Fameux</h4>
-
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="col-lg-4">
-                              <div class="card">
-                                 <img class="card-img-top" src="img/fameux4.png" alt="Card image" style="width:100%; height: 300px;">
-                                 <div class="card-body">
-                                    <h4 class="card-title" style="text-align: center;">Fameux</h4>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4">
-                              <div class="card">
-                                 <img class="card-img-top" src="img/fameux5.png" alt="Card image" style="width:100%; height: 300px;">
-                                 <div class="card-body">
-                                    <h4 class="card-title" style="text-align: center;">Fameux</h4>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4">
-                              <div class="card">
-                                 <img class="card-img-top" src="img/fameux6.png" alt="Card image" style="width:100%; height: 300px;">
-                                 <div class="card-body">
-                                    <h4 class="card-title" style="text-align: center;">Fameux</h4>
-                                 </div>
-                              </div>
-                           </div>
-
-                        </div>
-                        <div class="text-catalog" id="E Glow">
-                           <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;">E Glow</h4>
-                        </div>
-                        <div class="product_container bg-grid logo-slider slick_two">
-
-                           <div class="container mt-3">
-                              <div class="row responsive">
-
-                                 <div class="col-lg-4">
-                                    <div class="card">
-                                       <img class="card-img-top" src="img/eglow1.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                       <div class="card-body">
-                                          <h4 class="card-title" style="text-align: center;">E Glow</h4>
-
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <div class="col-lg-4">
-                                    <div class="card">
-                                       <img class="card-img-top" src="img/eglow2.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                       <div class="card-body">
-                                          <h4 class="card-title" style="text-align: center;">E Glow</h4>
-
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <div class="col-lg-4">
-                                    <div class="card">
-                                       <img class="card-img-top" src="img/eglow3.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                       <div class="card-body">
-                                          <h4 class="card-title" style="text-align: center;">E Glow</h4>
-
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <div class="col-lg-4">
-                                    <div class="card">
-                                       <img class="card-img-top" src="img/eglow4.png" alt="Card image" style="width:100%; height: 300px;">
-                                       <div class="card-body">
-                                          <h4 class="card-title" style="text-align: center;">E Glow</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-4">
-                                    <div class="card">
-                                       <img class="card-img-top" src="img/eglow5.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                       <div class="card-body">
-                                          <h4 class="card-title" style="text-align: center;">E Glow</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-4">
-                                    <div class="card">
-                                       <img class="card-img-top" src="img/eglow6.jpeg" alt="Card image" style="width:100%; height: 300px;">
-                                       <div class="card-body">
-                                          <h4 class="card-title" style="text-align: center;">E Glow</h4>
-                                       </div>
-                                    </div>
-                                 </div>
-
-                              </div>
-                              <div class="text-catalog" id="Beauvrys">
-                                 <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;">Beauvrys</h4>
-                              </div>
-                              <div class="product_container bg-grid logo-slider slick_two">
-
-                                 <div class="container mt-3">
-                                    <div class="row responsive">
-
-                                       <div class="col-lg-4">
-                                          <div class="card">
-                                             <img class="card-img-top" src="img/Beau1.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                             <div class="card-body">
-                                                <h4 class="card-title" style="text-align: center;">Beauvrys</h4>
-
-                                             </div>
-                                          </div>
-                                       </div>
-
-                                       <div class="col-lg-4">
-                                          <div class="card">
-                                             <img class="card-img-top" src="img/beau2.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                             <div class="card-body">
-                                                <h4 class="card-title" style="text-align: center;">Beauvrys</h4>
-
-                                             </div>
-                                          </div>
-                                       </div>
-
-                                       <div class="col-lg-4">
-                                          <div class="card">
-                                             <img class="card-img-top" src="img/beau3.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                             <div class="card-body">
-                                                <h4 class="card-title" style="text-align: center;">Beauvrys</h4>
-
-                                             </div>
-                                          </div>
-                                       </div>
-
-                                       <div class="col-lg-4">
-                                          <div class="card">
-                                             <img class="card-img-top" src="img/beau4.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                             <div class="card-body">
-                                                <h4 class="card-title" style="text-align: center;">Beauvrys</h4>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="col-lg-4">
-                                          <div class="card">
-                                             <img class="card-img-top" src="img/beau5.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                             <div class="card-body">
-                                                <h4 class="card-title" style="text-align: center;">Beauvrys</h4>
-                                             </div>
-                                          </div>
-                                       </div>
-
-                                    </div>
-                                    <div class="text-catalog" id="Beauty Rosa">
-                                       <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;">Beauty Rosa</h4>
-                                    </div>
-                                    <div class="product_container bg-grid logo-slider slick_two">
-
-                                       <div class="container mt-3">
-                                          <div class="row responsive">
-
-                                             <div class="col-lg-4">
-                                                <div class="card">
-                                                   <img class="card-img-top" src="img/br1.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                   <div class="card-body">
-                                                      <h4 class="card-title" style="text-align: center;">Beauty Rosa</h4>
-
-                                                   </div>
-                                                </div>
-                                             </div>
-
-                                             <div class="col-lg-4">
-                                                <div class="card">
-                                                   <img class="card-img-top" src="img/br2.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                   <div class="card-body">
-                                                      <h4 class="card-title" style="text-align: center;">Beauty Rosa</h4>
-
-                                                   </div>
-                                                </div>
-                                             </div>
-
-                                             <div class="col-lg-4">
-                                                <div class="card">
-                                                   <img class="card-img-top" src="img/br3.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                   <div class="card-body">
-                                                      <h4 class="card-title" style="text-align: center;">Beauty Rosa</h4>
-
-                                                   </div>
-                                                </div>
-                                             </div>
-
-                                             <div class="col-lg-4">
-                                                <div class="card">
-                                                   <img class="card-img-top" src="img/br4.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                   <div class="card-body">
-                                                      <h4 class="card-title" style="text-align: center;">Beauty Rosa</h4>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                             <div class="col-lg-4">
-                                                <div class="card">
-                                                   <img class="card-img-top" src="img/br5.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                   <div class="card-body">
-                                                      <h4 class="card-title" style="text-align: center;">Beauty Rosa</h4>
-                                                   </div>
-                                                </div>
-                                             </div>
-
-                                          </div>
-                                          <div class="text-catalog" id="BG Skin">
-                                             <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;">BG Skin</h4>
-                                          </div>
-                                          <div class="product_container bg-grid logo-slider slick_two">
-
-                                             <div class="container mt-3">
-                                                <div class="row responsive">
-
-                                                   <div class="col-lg-4">
-                                                      <div class="card">
-                                                         <img class="card-img-top" src="img/bg1.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                         <div class="card-body">
-                                                            <h4 class="card-title" style="text-align: center;">BG Skin</h4>
-
-                                                         </div>
-                                                      </div>
-                                                   </div>
-
-                                                   <div class="col-lg-4">
-                                                      <div class="card">
-                                                         <img class="card-img-top" src="img/bg2.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                         <div class="card-body">
-                                                            <h4 class="card-title" style="text-align: center;">BG Skin</h4>
-
-                                                         </div>
-                                                      </div>
-                                                   </div>
-
-                                                   <div class="col-lg-4">
-                                                      <div class="card">
-                                                         <img class="card-img-top" src="img/bg3.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                         <div class="card-body">
-                                                            <h4 class="card-title" style="text-align: center;">BG Skin</h4>
-
-                                                         </div>
-                                                      </div>
-                                                   </div>
-
-                                                   <div class="col-lg-4">
-                                                      <div class="card">
-                                                         <img class="card-img-top" src="img/bg4.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                         <div class="card-body">
-                                                            <h4 class="card-title" style="text-align: center;">BG Skin</h4>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div class="col-lg-4">
-                                                      <div class="card">
-                                                         <img class="card-img-top" src="img/bg5.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                         <div class="card-body">
-                                                            <h4 class="card-title" style="text-align: center;">BG Skin</h4>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div class="col-lg-4">
-                                                      <div class="card">
-                                                         <img class="card-img-top" src="img/bg6.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                         <div class="card-body">
-                                                            <h4 class="card-title" style="text-align: center;">BG Skin</h4>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div class="col-lg-4">
-                                                      <div class="card">
-                                                         <img class="card-img-top" src="img/bg7.jpg" alt="Card image" style="width:100%; height: 300px;">
-                                                         <div class="card-body">
-                                                            <h4 class="card-title" style="text-align: center;">BG Skin</h4>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-
-                                                </div>
-                                                <div class="text-catalog" id="Scarlett">
-                                                   <h4 style="font-size: 3rem; color: #8a1f34; font-family: Merienda One;">Scarlett</h4>
-                                                </div>
-                                                <div class="product_container bg-grid logo-slider slick_two">
-
-                                                   <div class="container mt-3">
-                                                      <div class="row responsive">
-
-                                                         <div class="col-lg-4">
-                                                            <div class="card">
-                                                               <img class="card-img-top" src="img/scar-body.png" alt="Card image" style="width:100%; height: 250px;">
-                                                               <div class="card-body">
-                                                                  <h4 class="card-title" style="text-align: center;">Scarlett</h4>
-
-                                                               </div>
-                                                            </div>
-                                                         </div>
-
-                                                         <div class="col-lg-4">
-                                                            <div class="card">
-                                                               <img class="card-img-top" src="img/scar-facecare.png" alt="Card image" style="width:100%; height: 250px;">
-                                                               <div class="card-body">
-                                                                  <h4 class="card-title" style="text-align: center;">Scarlett</h4>
-
-                                                               </div>
-                                                            </div>
-                                                         </div>
-
-                                                         <div class="col-lg-4">
-                                                            <div class="card">
-                                                               <img class="card-img-top" src="img/scar-haircare.png" alt="Card image" style="width:100%; height: 250px;">
-                                                               <div class="card-body">
-                                                                  <h4 class="card-title" style="text-align: center;">Scarlett</h4>
-
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <div class="col-lg-4">
-                                                            <div class="card">
-                                                               <img class="card-img-top" src="img/scarlet1.png" alt="Card image" style="width:100%; height: 250px;">
-                                                               <div class="card-body">
-                                                                  <h4 class="card-title" style="text-align: center;">Scarlett</h4>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                         <div class="col-lg-4">
-                                                            <div class="card">
-                                                               <img class="card-img-top" src="img/scarlett1.png" alt="Card image" style="width:100%; height: 250px;">
-                                                               <div class="card-body">
-                                                                  <h4 class="card-title" style="text-align: center;">Scarlett</h4>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-
-                                                      </div>
+         </div>
+      <?php endwhile; ?>
    </section>
 
    <section class="gallery" id="gallery">
