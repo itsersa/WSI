@@ -138,7 +138,7 @@
                 </form>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/melodybeauty29/"><i class="fa-brands fa-instagram"></i></a>
-                    <i class="fa-brands fa-tiktok"></i>
+                    <a href="https://www.tiktok.com/@melodybeauty29"><i class="fa-brands fa-tiktok"></i></a>
                     <i class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
