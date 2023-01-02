@@ -99,7 +99,7 @@
             </div>
         </div>
         <hr>
-        <p class="copyright">Melody Beauty @ 2022 - All Rights Reserved</p> <br>
+        <p class="copyright">Melody Beauty @ 2023 - All Rights Reserved</p> <br>
      </footer>
 </body>
 </html>
