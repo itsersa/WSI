@@ -94,7 +94,7 @@
                     <a href="https://www.instagram.com/melodybeauty29/"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@melodybeauty29"><i class="fa-brands fa-tiktok"></i></a>
                     <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://api.whatsapp.com/send?phone=6281331600029"> <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
