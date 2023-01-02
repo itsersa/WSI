@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <?php include '../TA SEM 3/header.php'; ?>
+  <?php include './partials/header.php'; ?>
   <div class="section">
     <div class="container">
       <div class="content-section">

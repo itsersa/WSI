@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/cb08e330cf.js" ></script>
 </head>
 <body>
-<?php include '../TA SEM 3/header.php'; ?>
+<?= include ('./partials/header.php') ?>
     <div class="section">
         <div class="container">
             <div class="content-section">

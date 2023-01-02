@@ -18,7 +18,7 @@
                 <li><a href="index2.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="konsultasi.php">Konsultasi</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </div>
         <div class="col">
