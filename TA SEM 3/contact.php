@@ -202,7 +202,7 @@
     <div class="row1">
         <div class="col">
             <img src="img/Melody.png" class="logo">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+           <p>Melody Beauty Store adalah toko kosmetik yang menyediakan beberapa produk kosmetik dan melayani konsultasi hingga permintaan reseller</p>
         </div>
         <div class="col">
             <h3>Shop <div class="underline"><span></span></div></h3>
