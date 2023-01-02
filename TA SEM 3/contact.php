@@ -209,7 +209,7 @@
             <i class="fa-solid fa-location-dot"></i>
             <p>Ruko Mastrip Square Blok C, Jember</p>
             <p class="email-id">.com</p>
-            <h4>+123 456789</h4>
+            <p>+62 81331600029</p>
         </div>
         <div class="col">
             <h3>Links <div class="underline"><span></span></h3>
