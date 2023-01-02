@@ -47,7 +47,7 @@
  
        <div class="content">
           <h3>Yuk Jadi Reseller Melody Store!</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut officia, accusantium mollitia laudantium dolorum dolore.</p>
+          <p>Jadi bagian Melody store dan dapatkan banyak keuntungan dengan menjadi reseller Melody Store</p>
        </div>
  
     </section>
@@ -63,8 +63,8 @@
  
     <div class="content">
        <h3>Syarat Menjadi Reseller Melody Store</h3>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam suscipit sunt repellendus, dolorum recusandae placeat quae. Iste eaque aspernatur, animi deleniti voluptas, sunt molestias eveniet sint consectetur facere a ex.</p>
-       <a href="#" class="btn">Daftar Reseller</a>
+       <p>Mulai jadi bagian Melody Beauty Store dengan menjadi reseller. Caranya beli paket usaha dengan klik:</p>
+       <a href="https://www.tiktok.com/@melodybeauty29" class="btn">Daftar Reseller</a>
     </div>
  
  </section>
