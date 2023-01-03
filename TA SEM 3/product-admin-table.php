@@ -177,9 +177,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                                             }
                                                         }
                                                     }
-                                                } else {
-                                                    header("Location: product-admin-table.php");
-                                                }
+                                                } 
 
                                                 ?>
                                             </form>
