@@ -24,10 +24,10 @@
                <i class="fas fa-bars"></i>
             </label>
             <ul>
-               <li class="items"><a href="index2.php">Home</a></li>
-               <li class="items"><a href="about.php">About</a></li>
-               <li class="items"><a href="konsultasi.php">Konsultasi</a></li>
-               <li class="items"><a href="contact.php">Contact</a></li>
+               <li class="items"><a style="text-decoration:none" href="index2.php">Home</a></li>
+               <li class="items"><a style="text-decoration:none" href="about.php">About</a></li>
+               <li class="items"><a style="text-decoration:none" href="konsultasi.php">Konsultasi</a></li>
+               <li class="items"><a style="text-decoration:none" href="contact.php">Contact</a></li>
             </ul>
          </nav>
 

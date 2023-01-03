@@ -1,3 +1,7 @@
+<?php
+
+include "catat_visitor.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +56,7 @@
          <div class="content">
             <h3>Healthy & Glowing Skin Start Here</h3>
             <p>Yuk kunjungi Melody Store dan cari tau jenis kulitmu dan produk yang cocok untukmu!</p>
-            <a href="#" class="btn">about us</a>
+            <a href="about.php" class="btn">about us</a>
          </div>
       </section>
    </div>
@@ -67,7 +71,7 @@
       <div class="content">
          <h3>Yuk Konsultasikan Jenis Kulitmu!</h3>
          <p>Pakai skincare tapi tidak cocok? Yuk coba konsultasikan jenis kulitmu agar tidak salah memilih produk skincare yang cocok</p>
-         <a href="#" class="btn">Konsultasi</a>
+         <a href="konsultasi.php" class="btn">Konsultasi</a>
       </div>
 
    </section>

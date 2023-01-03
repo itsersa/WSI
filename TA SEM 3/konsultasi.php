@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="style/konsul.css?=<php? echo time(); ?>">
     <link rel="stylesheet" href="konsul.css?=<php? echo time(); ?>">
     <script src="https://kit.fontawesome.com/3dba02c49c.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/cb08e330cf.js" ></script>
+    <script src="https://kit.fontawesome.com/cb08e330cf.js"></script>
 </head>
+
 <body>
-<?= include ('./partials/header.php') ?>
+    <?php include './partials/header.php'; ?>
     <div class="section">
         <div class="container">
             <div class="content-section">
@@ -21,8 +23,8 @@
                 <div class="content">
                     <p> Pakai skincare tapi tidak cocok? Yuk coba konsultasikan jenis kulitmu agar tidak salah memilih produk skincare yang cocok</p>
                     <div class="button">
-						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
-					</div>
+                        <a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
+                    </div>
                 </div>
             </div>
             <div class="image-section">
@@ -44,8 +46,8 @@
                         3. Jika Ingin Melakukan Konsultasi Dan Cek Jenis Kulit Tanpa Minimal Pembelian, Maka Pilih Layanan Berbayar Senilai Rp.50.000,- <br>
                     </p>
                     <div class="button-off">
-						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
-					</div>
+                        <a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
+                    </div>
                 </div>
             </div>
             <div class="image-section-off">
@@ -62,22 +64,24 @@
                 </div>
                 <div class="content-off1">
                     <p> Bingung Menentukan Produk Kosmetik Yang Sesuai? Dapatkan Layanan Konsultasi Online Untuk Menentukan Produk Yang Sesuai Dengan Jenis Kulit Anda. Lakukan Mudah Dengan Hanya Sekali Klik: <br>
-                    1. Konsultasi Online Dapat Dilakukan Sebelum Pembelian Produk. <br>
-                    2. Dapat Melalui Chat WhatsApp Dengan Admin. <br>
-                    3. Tanpa Minimal Pembelian. <br>
+                        1. Konsultasi Online Dapat Dilakukan Sebelum Pembelian Produk. <br>
+                        2. Dapat Melalui Chat WhatsApp Dengan Admin. <br>
+                        3. Tanpa Minimal Pembelian. <br>
                     </p>
                     <div class="button-off1">
-						<a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
-					</div>
+                        <a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
+                    </div>
                 </div>
             </div>
             <div class="image-section-off1">
                 <img src="img/Konsul online.png">
             </div>
         </div>
-    </div>
+            
+    </div>
 
-    <?= include('./partials/footer.php') ?>
+    <?php include './partials/footer.php'; ?>
 
 </body>
+
 </html>

@@ -16,5 +16,5 @@ else if (isset($_SERVER['REMOTE_ADDR']))
     $ipaddress = $_SERVER['REMOTE_ADDR'];
 
 $query = "INSERT INTO visitor(id, idsession, ipaddress) value (NULL, '$idsession', '$ipaddress')";
-print_r($query);
+// print_r($query);
 $result = $koneksi->query($query);

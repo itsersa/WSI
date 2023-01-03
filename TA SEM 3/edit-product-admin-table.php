@@ -143,7 +143,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 move_uploaded_file($tmp_name_utama, $img_upload_path_utama);
 
                                 $query = "UPDATE produk SET nama_produk = '$nama_produk', imageUtama = '$new_image_name_utama' WHERE id = '$id'";
-                                print_r($query);
+                                // print_r($query);
 
                                 $result = mysqli_query($koneksi, $query);
                                 echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
@@ -169,7 +169,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 move_uploaded_file($tmp_name, $img_upload_path);
 
                                 $query = "UPDATE produk SET nama_produk = '$nama_produk', image = '$new_image_name' WHERE id = '$id'";
-                                print_r($query);
+                                // print_r($query);
 
                                 $result = mysqli_query($koneksi, $query);
                                 echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
@@ -195,7 +195,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 move_uploaded_file($tmp_name2, $img_upload_path2);
 
                                 $query = "UPDATE produk SET nama_produk = '$nama_produk', image2 = '$new_image_name2' WHERE id = '$id'";
-                                print_r($query);
+                                // print_r($query);
 
                                 $result = mysqli_query($koneksi, $query);
                                 echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
@@ -221,7 +221,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 move_uploaded_file($tmp_name3, $img_upload_path3);
 
                                 $query = "UPDATE produk SET nama_produk = '$nama_produk', image3 = '$new_image_name3' WHERE id = '$id'";
-                                print_r($query);
+                                // print_r($query);
 
                                 $result = mysqli_query($koneksi, $query);
                                 echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
@@ -247,7 +247,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 move_uploaded_file($tmp_name4, $img_upload_path4);
 
                                 $query = "UPDATE produk SET nama_produk = '$nama_produk', image4 = '$new_image_name4' WHERE id = '$id'";
-                                print_r($query);
+                                // print_r($query);
 
                                 $result = mysqli_query($koneksi, $query);
                                 echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
@@ -273,7 +273,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 move_uploaded_file($tmp_name5, $img_upload_path5);
 
                                 $query = "UPDATE produk SET nama_produk = '$nama_produk', image5 = '$new_image_name5' WHERE id = '$id'";
-                                print_r($query);
+                                // print_r($query);
 
                                 $result = mysqli_query($koneksi, $query);
                                 echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
@@ -284,7 +284,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                         }
                     } else {
                         $query = "UPDATE produk SET nama_produk = '$nama_produk' WHERE id = '$id'";
-                        print_r($query);
+                        // print_r($query);
 
                         $result = mysqli_query($koneksi, $query);
                         echo "<meta http-equiv='refresh' content='1; url=http://localhost/wsi/WSI/TA%20SEM%203/edit-product-admin.php?id={$id}'>";
@@ -295,7 +295,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
             </main>
 
             <!-- PARTIAL KERANGKA FOOTER -->
-            <?= include('./partials/foo.php') ?>
+            <?php include './partials/foo.php'; ?>
         </div>
     </body>
 

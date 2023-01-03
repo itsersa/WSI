@@ -120,7 +120,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                                 move_uploaded_file($tmp_name, $img_upload_path);
 
                                 $query = "UPDATE admin_list SET nama_karyawan = '$nama', foto_karyawan = '$new_image_name', notelp_karyawan = '$notelp', username_karyawan = '$username', password_karyawan = '$password' WHERE id = '$id'";
-                                print_r($query);
+                                // print_r($query);
 
                                 $result = mysqli_query($koneksi, $query);
                                 if ($result == true) {

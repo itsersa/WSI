@@ -95,42 +95,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) { ?>
                             </div>
                         </div>
                     </div>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            DataTable Example
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Office</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th>Salary</th>
-                                    </tr>
-                                </tfoot>
-
-                            </table>
-                        </div>
-                    </div>
                 </div>
             </main>
 
             <!-- PARTIAL KERANGKA FOOTER -->
-            <?= include('./partials/foo.php') ?>
+            <?php include './partials/foo.php'; ?>
         </div>
     </body>
 
