@@ -16,7 +16,7 @@
 
       <section class="flex">
 
-         <a href="index2.php" class="logo"><img src="img/Melody.png" alt=""></a>
+         <a href="index.php" class="logo"><img src="img/Melody.png" alt=""></a>
 
          <nav class="navbar">
             <input type="checkbox" id="check">
@@ -24,7 +24,7 @@
                <i class="fas fa-bars"></i>
             </label>
             <ul>
-               <li class="items"><a style="text-decoration:none" href="index2.php">Home</a></li>
+               <li class="items"><a style="text-decoration:none" href="index.php">Home</a></li>
                <li class="items"><a style="text-decoration:none" href="about.php">About</a></li>
                <li class="items"><a style="text-decoration:none" href="konsultasi.php">Konsultasi</a></li>
                <li class="items"><a style="text-decoration:none" href="contact.php">Contact</a></li>

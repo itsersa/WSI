@@ -15,7 +15,7 @@
         <div class="col">
             <h3>Links <div class="underline"><span></span></h3>
             <ul>
-                <li><a href="index2.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="konsultasi.php">Konsultasi</a></li>
                 <li><a href="contact.php">Contact</a></li>

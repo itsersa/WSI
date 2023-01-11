@@ -31,7 +31,7 @@
             <a href="#home" class="logo"><img src="img/Melody.png" alt=""></a>
 
             <nav class="navbar">
-                <a style="text-decoration:none" href="index2.php">Home</a>
+                <a style="text-decoration:none" href="index.php">Home</a>
                 <a style="text-decoration:none" href="about.php">About</a>
                 <a style="text-decoration:none" href="konsultasi.php">Konsultasi</a>
                 <a style="text-decoration:none" href="#">Contact</a>
