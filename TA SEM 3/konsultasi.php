@@ -65,11 +65,11 @@
                 <div class="content-off1">
                     <p> Bingung Menentukan Produk Kosmetik Yang Sesuai? Dapatkan Layanan Konsultasi Online Untuk Menentukan Produk Yang Sesuai Dengan Jenis Kulit Anda. Lakukan Mudah Dengan Hanya Sekali Klik: <br>
                         1. Konsultasi Online Dapat Dilakukan Sebelum Pembelian Produk. <br>
-                        2. Dapat Melalui Chat WhatsApp Dengan Admin. <br>
+                        2. Dapat Melalui Chat WhatsApp atau Gmeet Dengan Ahli. <br>
                         3. Tanpa Minimal Pembelian. <br>
                     </p>
                     <div class="button-off1">
-                        <a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
+                        <a href="#book.html">Konsultasi</a>
                     </div>
                 </div>
             </div>
