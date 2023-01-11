@@ -46,7 +46,7 @@
                         3. Jika Ingin Melakukan Konsultasi Dan Cek Jenis Kulit Tanpa Minimal Pembelian, Maka Pilih Layanan Berbayar Senilai Rp.50.000,- <br>
                     </p>
                     <div class="button-off">
-                        <a href="https://api.whatsapp.com/send?phone=6281331600029">Konsultasi</a>
+                        <a href="#form.html">Konsultasi</a>
                     </div>
                 </div>
             </div>
